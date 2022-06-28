@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRoutePath } from '@/lib/routePath';
 
-const Image = React.forwardRef<
+export const Image = React.forwardRef<
   React.ElementRef<'img'>,
   React.ComponentPropsWithoutRef<'img'>
 >(({ children, src, alt, ...props }, forwardedRef) => {
@@ -16,5 +16,3 @@ const Image = React.forwardRef<
 });
 
 Image.displayName = 'Image';
-
-export default Image;

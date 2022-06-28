@@ -1,11 +1,7 @@
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Container from '@/components/container';
-import Layout from '@/components/layout';
-import PostBody from '@/components/post-body';
-import PostHeader from '@/components/post-header';
-import PostTitle from '@/components/post-title';
+import { Post } from '@/components/posts/Post';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 import type { PostType } from '@/types/post';
@@ -16,38 +12,23 @@ type Props = {
   preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const View = ({ post }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      <Container>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>{post.title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+    <article className="mb-32">
+      <Head>
+        <title>{post.title}</title>
+        <meta property="og:image" content={post.ogImage.url} />
+      </Head>
+      <Post post={post} />
+    </article>
   );
 };
 
-export default Post;
+export default View;
 
 type Params = {
   params: {

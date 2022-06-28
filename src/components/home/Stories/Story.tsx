@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import DateFormatter from './date-formatter';
-import Image from './image';
+import { DateFormatter } from '../../common/DateFormatter';
+import { Image } from '../../common/Image';
 
 type Props = {
   title: string;
@@ -10,9 +10,9 @@ type Props = {
   slug: string;
 };
 
-const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) => {
+export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
-    <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer m-auto">
+    <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer">
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <a className="w-full block h-full">
           <Image
@@ -36,5 +36,3 @@ const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) => {
     </div>
   );
 };
-
-export default PostPreview;
