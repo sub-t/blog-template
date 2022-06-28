@@ -1,5 +1,6 @@
-import { Container } from './Container';
+import { Container } from '../Container';
 import { Footer } from './Footer';
+import { Header } from './Header';
 
 type Props = {
   children: React.ReactNode;
@@ -7,7 +8,8 @@ type Props = {
 
 export const Layout = ({ children }: Props) => {
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-12 bg-slate-50">
+      <Header />
       <div className="min-h-screen">
         <main>
           <Container>{children}</Container>

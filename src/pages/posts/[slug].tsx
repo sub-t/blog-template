@@ -18,7 +18,7 @@ const View = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <article className="mb-32">
+    <article className="mb-16">
       <Head>
         <title>{post.title}</title>
         <meta property="og:image" content={post.ogImage.url} />

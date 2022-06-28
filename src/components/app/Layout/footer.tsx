@@ -1,5 +1,5 @@
 import { PATH } from '@/lib/constants';
-import { Container } from './Container';
+import { Container } from '../Container';
 
 export const Footer = () => {
   return (

@@ -9,12 +9,12 @@ type Props = {
 
 const Index = ({ posts }: Props) => {
   return (
-    <>
+    <div className="mb-12">
       <Head>
         <title>Next.js Blog Example with MD</title>
       </Head>
       <Stories posts={posts} />
-    </>
+    </div>
   );
 };
 
