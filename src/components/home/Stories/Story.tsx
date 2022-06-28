@@ -14,13 +14,13 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
     <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer">
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
-        <a className="w-full block h-full">
+        <a className="w-full h-full flex">
           <Image
             src={coverImage}
             alt={`Cover Image for ${title}`}
-            className="max-h-40 w-full object-cover"
+            className="w-1/3 h-full object-cover"
           />
-          <div className="bg-white dark:bg-gray-800 w-full p-6 flex flex-col gap-2">
+          <div className="bg-white dark:bg-gray-800 w-2/3 p-6 flex flex-col gap-2">
             <div className="text-indigo-500 text-md font-medium">
               <DateFormatter dateString={date} />
             </div>

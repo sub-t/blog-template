@@ -7,13 +7,13 @@ type Props = {
 
 export const Layout = ({ children }: Props) => {
   return (
-    <>
+    <div className="flex flex-col gap-16">
       <div className="min-h-screen">
         <main>
           <Container>{children}</Container>
         </main>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
