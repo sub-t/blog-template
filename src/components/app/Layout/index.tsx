@@ -1,5 +1,5 @@
-import { Container } from './container';
-import { Footer } from './footer';
+import { Container } from './Container';
+import { Footer } from './Footer';
 
 type Props = {
   children: React.ReactNode;
