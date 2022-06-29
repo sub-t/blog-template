@@ -8,7 +8,7 @@ type Props = {
 export const Stories = ({ posts }: Props) => {
   return (
     <section>
-      <h2 className="mb-8 text-4xl font-bold tracking-tighter leading-tight">
+      <h2 className="text-gray-800 dark:text-white mb-8 text-4xl font-bold tracking-tighter leading-tight">
         Stories
       </h2>
       <div className="grid grid-cols-1 gap-10">
