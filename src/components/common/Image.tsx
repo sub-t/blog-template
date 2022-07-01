@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRoutePath } from '@/lib/routePath';
+import { useRoutePath } from '@/hooks/useRoutePath';
 
 export const Image = React.forwardRef<
   React.ElementRef<'img'>,

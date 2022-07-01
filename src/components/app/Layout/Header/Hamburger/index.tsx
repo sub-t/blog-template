@@ -5,8 +5,8 @@ import {
   DialogTrigger,
   DialogContent,
 } from '@/components/common/Dialog';
-import { links } from './config/links';
-import { Link } from './Link';
+import { links } from '../config/links';
+import { LinkItem } from './LinkItem';
 
 export const Hamburger = () => (
   <Dialog>
@@ -18,10 +18,10 @@ export const Hamburger = () => (
         <HamburgerMenuIcon />
       </button>
     </DialogTrigger>
-    <DialogContent className="w-4/5 h-4/5 flex flex-col justify-center items-center bg-white dark:bg-slate-900 rounded-lg">
+    <DialogContent className="w-4/5 h-4/5 flex flex-col justify-center items-center gap-3 bg-white dark:bg-slate-900 rounded-lg">
       {links.map(({ name, href }) => (
         <NextLink key={name} href={href} passHref>
-          <Link>{name}</Link>
+          <LinkItem>{name}</LinkItem>
         </NextLink>
       ))}
     </DialogContent>

@@ -3,7 +3,7 @@ import { SunIcon } from '@radix-ui/react-icons';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { Container } from '../../Container';
 import { Hamburger } from './Hamburger';
-import { Nav } from './Nav';
+import { Nav } from './NavBar';
 
 export const Header = () => {
   const { toggle } = useDarkMode();
