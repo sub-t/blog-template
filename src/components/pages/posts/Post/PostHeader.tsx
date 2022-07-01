@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { DateFormatter } from '../../../common/DateFormatter';
 import { Image } from '../../../common/Image';
 
@@ -5,22 +6,26 @@ type Props = {
   title: string;
   coverImage: string;
   date: string;
+  tags: string[];
 };
 
-export const PostHeader = ({ title, coverImage, date }: Props) => {
+export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
   return (
-    <>
-      <h1 className="text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
+    <div className="flex flex-col gap-6">
+      <h1 className="text-base-style text-4xl font-bold tracking-tighter leading-tight">
         {title}
       </h1>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <Image src={coverImage} alt={`Cover Image for ${title}`} />
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="mb-6 text-lg">
+      <div className="flex items-center gap-2">
+        {tags.map((tag) => (
+          <Link key="tag" href={`/tags/${tag}`} passHref>
+            <a className="tag">{tag}</a>
+          </Link>
+        ))}
+        <span className="text-base-style text-sm">
           <DateFormatter dateString={date} />
-        </div>
+        </span>
       </div>
-    </>
+      <Image src={coverImage} alt={`Cover Image for ${title}`} />
+    </div>
   );
 };

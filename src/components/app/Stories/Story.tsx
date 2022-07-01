@@ -24,9 +24,7 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
             <div className="text-indigo-500 text-md font-medium">
               <DateFormatter dateString={date} />
             </div>
-            <h3 className="text-gray-800 dark:text-white text-xl font-medium">
-              {title}
-            </h3>
+            <h3 className="text-base-style text-xl font-medium">{title}</h3>
             <p className="text-gray-400 dark:text-gray-300 font-light text-md line-clamp-3">
               {excerpt}
             </p>

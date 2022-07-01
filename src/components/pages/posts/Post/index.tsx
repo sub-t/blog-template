@@ -7,14 +7,17 @@ type Props = {
 };
 
 export const Post: React.VFC<Props> = ({ post }) => {
+  const { title, coverImage, date, tags, content } = post;
+
   return (
     <>
       <PostHeader
-        title={post.title}
-        coverImage={post.coverImage}
-        date={post.date}
+        title={title}
+        coverImage={coverImage}
+        date={date}
+        tags={tags}
       />
-      <PostBody content={post.content} />
+      <PostBody content={content} />
     </>
   );
 };

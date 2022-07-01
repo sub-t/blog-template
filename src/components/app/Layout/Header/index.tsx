@@ -11,16 +11,14 @@ export const Header = () => {
   return (
     <Container className="sticky top-0 z-10 py-3 backdrop-blur-sm">
       <nav className="flex items-center justify-between">
-        <div className="text-gray-800 dark:text-white text-3xl font-bold">
-          Blog
-        </div>
+        <div className="text-base-style text-3xl font-bold">Blog</div>
 
         <Nav />
 
         <div className="flex gap-4">
           <button
             type="button"
-            className="text-gray-800 dark:text-white p-4"
+            className="text-base-style p-4"
             aria-label="toggle theme"
             onClick={() => toggle()}
           >
