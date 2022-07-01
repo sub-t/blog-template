@@ -1,15 +1,12 @@
 import ErrorPage from 'next/error';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Post } from '@/components/posts/Post';
+import { Posts } from '@/components/pages/posts';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
-import type { PostType } from '@/types/post';
+import { PostType } from '@/types/post';
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
 };
 
 const View = ({ post }: Props) => {
@@ -17,15 +14,7 @@ const View = ({ post }: Props) => {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  return (
-    <article className="mb-16">
-      <Head>
-        <title>{post.title}</title>
-        <meta property="og:image" content={post.ogImage.url} />
-      </Head>
-      <Post post={post} />
-    </article>
-  );
+  return <Posts post={post} />;
 };
 
 export default View;

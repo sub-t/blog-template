@@ -1,4 +1,4 @@
-import type { LinkType } from '@/types/link';
+import { LinkType } from '@/types/link';
 
 export const links: LinkType[] = [
   { name: 'home', href: '/' },

@@ -1,5 +1,5 @@
-import { DateFormatter } from '../../common/DateFormatter';
-import { Image } from '../../common/Image';
+import { DateFormatter } from '../../../common/DateFormatter';
+import { Image } from '../../../common/Image';
 
 type Props = {
   title: string;

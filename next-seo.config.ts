@@ -1,4 +1,4 @@
-import type { DefaultSeoProps } from 'next-seo';
+import { DefaultSeoProps } from 'next-seo';
 
 export const defaultSeo = (path: string): DefaultSeoProps => ({
   defaultTitle: 'blog',

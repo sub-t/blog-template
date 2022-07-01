@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import type { PostType } from '@/types/post';
+import { PostType } from '@/types/post';
 
 const postsDirectory = join(process.cwd(), '_posts').replaceAll('\\', '/');
 

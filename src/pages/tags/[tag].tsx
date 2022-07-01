@@ -1,4 +1,4 @@
-import { Stories } from '@/components/home/Stories';
+import { Tags } from '@/components/pages/tags';
 import { getAllPosts } from '@/lib/api';
 import { PostType } from '@/types/post';
 
@@ -7,11 +7,7 @@ type Props = {
 };
 
 const View = ({ posts }: Props) => {
-  return (
-    <div className="mb-12">
-      <Stories posts={posts} />
-    </div>
-  );
+  return <Tags posts={posts} />;
 };
 
 export default View;
