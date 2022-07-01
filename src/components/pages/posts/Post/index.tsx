@@ -1,6 +1,6 @@
+import { PostType } from '@/types/post';
 import { PostBody } from './PostBody';
 import { PostHeader } from './PostHeader';
-import { PostType } from '@/types/post';
 
 type Props = {
   post: PostType;

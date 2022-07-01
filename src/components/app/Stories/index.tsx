@@ -1,5 +1,5 @@
-import { Story } from './Story';
 import { PostType } from '@/types/post';
+import { Story } from './Story';
 
 type Props = {
   posts: PostType[];
