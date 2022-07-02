@@ -1,42 +1,42 @@
 @import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
 .post {
-  @apply my-5 text-base font-medium text-base-style;
+  @apply my-5 text-base font-medium text-base-style !important;
 }
 
 .post a {
-  @apply text-blue-600 dark:text-blue-400
+  @apply text-blue-600 dark:text-blue-400 !important;
 }
 
 .post p {
-  @apply mt-0 mb-9 text-base;
+  @apply mt-0 mb-9 text-base !important;
 }
 
 .post h2 {
-  @apply mb-6 text-2xl;
+  @apply px-4 py-2 mt-20 mb-12 border-l-4 border-current text-2xl !important;
 }
 
 .post h3 {
-  @apply mt-8 mb-6 text-xl;
+  @apply px-4 py-2 mt-12 mb-8 border-b-2 text-xl !important;
 }
 
 .post h4 {
-  @apply mb-4 text-lg;
+  @apply mb-4 text-lg !important;
 }
 
 .post ul + p {
-  @apply mt-5;
+  @apply mt-5 !important;
 }
 
 .post code {
-  font-size: max(12px, 85%);
-  @apply whitespace-nowrap font-mono mx-[2px] py-[2px] px-[3px] rounded-sm text-violet-900 bg-violet-100 dark:text-violet-100 dark:bg-violet-900;
+  font-size: max(12px, 85%) !important;
+  @apply whitespace-nowrap font-mono mx-[2px] py-[2px] px-[3px] rounded-sm text-violet-900 bg-violet-100 dark:text-violet-100 dark:bg-violet-900 !important;
 }
 
 .remark-highlight pre code {
-  @apply m-0 p-0 text-sm text-inherit bg-transparent dark:text-inherit dark:bg-transparent;
+  @apply m-0 p-0 text-sm text-inherit bg-transparent dark:text-inherit dark:bg-transparent !important;
 }
 
 .remark-highlight pre {
-  @apply p-4 mb-9 rounded-md;
+  @apply p-4 mb-9 rounded-md !important;
 }

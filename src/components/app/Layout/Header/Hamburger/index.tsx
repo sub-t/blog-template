@@ -1,5 +1,5 @@
-import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
+import { RiMenu4Line } from 'react-icons/ri';
 import {
   Dialog,
   DialogTrigger,
@@ -12,7 +12,7 @@ export const Hamburger = () => (
   <Dialog>
     <DialogTrigger asChild>
       <button className="text-base-style p-4" aria-label="hamburger menu">
-        <HamburgerMenuIcon />
+        <RiMenu4Line />
       </button>
     </DialogTrigger>
     <DialogContent className="w-4/5 h-4/5 flex flex-col justify-center items-center gap-3 bg-base-style rounded-lg">

@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { AiTwotoneTags } from 'react-icons/ai';
+import { RiTimeFill } from 'react-icons/ri';
 import { DateFormatter } from '../../../common/DateFormatter';
 import { Image } from '../../../common/Image';
 
@@ -16,12 +18,14 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
         {title}
       </h1>
       <div className="flex flex-wrap items-center gap-2">
+        <span className='text-base-style'><AiTwotoneTags /></span>
         {tags.map((tag) => (
           <Link key="tag" href={`/tags/${tag}`} passHref>
             <a className="badge">{tag}</a>
           </Link>
         ))}
-        <span className="text-base-style text-sm">
+        <span className="flex items-center gap-2 text-base-style text-sm">
+          <RiTimeFill />
           <DateFormatter dateString={date} />
         </span>
       </div>

@@ -14,6 +14,6 @@
     @apply text-base-style p-4;
   }
   .badge {
-    @apply text-xs flex items-center font-bold uppercase px-3 py-1 bg-black text-white;
+    @apply text-xs flex items-center font-bold px-3 py-1 bg-black text-white;
   }
 }
