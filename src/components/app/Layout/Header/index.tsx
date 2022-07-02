@@ -1,5 +1,5 @@
 import React from 'react';
-import { SunIcon } from '@radix-ui/react-icons';
+import { FiSun } from 'react-icons/fi';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { Container } from '../../Container';
 import { Hamburger } from './Hamburger';
@@ -22,7 +22,7 @@ export const Header = () => {
             aria-label="toggle theme"
             onClick={() => toggle()}
           >
-            <SunIcon />
+            <FiSun />
           </button>
 
           <div className="flex lg:hidden">

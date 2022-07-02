@@ -15,7 +15,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
       <h1 className="text-base-style text-4xl font-bold tracking-tighter leading-tight">
         {title}
       </h1>
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         {tags.map((tag) => (
           <Link key="tag" href={`/tags/${tag}`} passHref>
             <a className="badge">{tag}</a>

@@ -1,8 +1,8 @@
 import React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import { Cross1Icon } from '@radix-ui/react-icons';
 import { Slot } from '@radix-ui/react-slot';
 import { AnimatePresence, motion } from 'framer-motion';
+import { IoMdClose } from 'react-icons/io';
 import { useStore } from './store';
 
 const MotionSlot = motion(Slot);
@@ -61,7 +61,7 @@ export const DialogContent = React.forwardRef<
                       aria-label="close"
                       onClick={() => setOpen(false)}
                     >
-                      <Cross1Icon />
+                      <IoMdClose />
                     </button>
                   </DialogPrimitive.Close>
                 </DialogPrimitive.Content>
