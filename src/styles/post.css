@@ -1,0 +1,42 @@
+@import 'prism-themes/themes/prism-vsc-dark-plus.css';
+
+.post {
+  @apply my-5 text-base font-medium text-base-style;
+}
+
+.post a {
+  @apply text-blue-600 dark:text-blue-400
+}
+
+.post p {
+  @apply mt-0 mb-9 text-base;
+}
+
+.post h2 {
+  @apply mb-6 text-2xl;
+}
+
+.post h3 {
+  @apply mt-8 mb-6 text-xl;
+}
+
+.post h4 {
+  @apply mb-4 text-lg;
+}
+
+.post ul + p {
+  @apply mt-5;
+}
+
+.post code {
+  font-size: max(12px, 85%);
+  @apply whitespace-nowrap font-mono mx-[2px] py-[2px] px-[3px] rounded-sm text-violet-900 bg-violet-100 dark:text-violet-100 dark:bg-violet-900;
+}
+
+.remark-highlight pre code {
+  @apply m-0 p-0 text-sm text-inherit bg-transparent dark:text-inherit dark:bg-transparent;
+}
+
+.remark-highlight pre {
+  @apply p-4 mb-9 rounded-md;
+}

@@ -18,7 +18,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
       <div className="flex items-center gap-2">
         {tags.map((tag) => (
           <Link key="tag" href={`/tags/${tag}`} passHref>
-            <a className="tag">{tag}</a>
+            <a className="badge">{tag}</a>
           </Link>
         ))}
         <span className="text-base-style text-sm">
