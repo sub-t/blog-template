@@ -1,29 +1,19 @@
-.toc {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 0.25rem;
-  padding: 1rem;
-  font-size: 0.875rem;
+.toc-list {
+  @apply flex flex-col gap-3;
 }
 
 .toc-list .toc-list {
-  padding-left: 1rem;
-  padding-top: 0.5rem;
-}
-
-.toc-list-item {
-  padding-bottom: 0.5rem;
-}
-
-.toc-list-item:last-child {
-  padding-bottom: 0;
+  @apply flex flex-col gap-2 pl-4 mt-1;
 }
 
 .toc-link {
-  color: blue;
+  @apply text-base font-bold text-slate-400 dark:text-slate-600;
+}
+
+.toc-list .toc-list .toc-link {
+  @apply text-sm;
 }
 
 .is-active-link {
-  color: red;
-  font-weight: 700;
+  @apply text-slate-900 dark:text-slate-200;
 }
