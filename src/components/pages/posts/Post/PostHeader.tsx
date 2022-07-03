@@ -15,7 +15,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
   return (
     <div className="flex flex-col gap-6">
       <Image src={coverImage} alt={`Cover Image for ${title}`} />
-      <h1 className="text-base-style text-4xl font-bold tracking-tighter leading-tight">
+      <h1 className="text-base-style text-3xl md:text-4xl font-bold tracking-tighter leading-tight">
         {title}
       </h1>
       <div className="flex flex-wrap items-center gap-2">
