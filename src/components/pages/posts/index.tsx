@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Profile } from '@/components/app/Profile';
 import { PostType } from '@/types/post';
 import { Post } from './Post';
 import { Toc } from './Toc';
@@ -21,7 +22,12 @@ export const Posts: React.VFC<Props> = ({ post }) => (
       </main>
     </div>
     <aside>
-      <Toc />
+      <div className="flex flex-col gap-6 h-full">
+        <Profile />
+        <div className="lg:top-20 lg:sticky">
+          <Toc />
+        </div>
+      </div>
     </aside>
   </div>
 );
