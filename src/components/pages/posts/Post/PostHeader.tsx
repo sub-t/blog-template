@@ -20,7 +20,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
       <div className="flex flex-wrap items-center gap-2">
         <span className='text-base-style'><AiTwotoneTags /></span>
         {tags.map((tag) => (
-          <Link key="tag" href={`/tags/${tag}`} passHref>
+          <Link key={tag} href={`/tags/${tag}`} passHref>
             <a className="badge">{tag}</a>
           </Link>
         ))}

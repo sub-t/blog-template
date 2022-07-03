@@ -7,8 +7,10 @@ type Props = {
 
 export const Tags = ({ posts }: Props) => {
   return (
-    <div className="mb-12">
-      <Stories posts={posts} />
-    </div>
+    <main>
+      <div className="mb-12">
+        <Stories posts={posts} />
+      </div>
+    </main>
   );
 };

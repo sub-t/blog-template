@@ -11,9 +11,7 @@ export const Layout = ({ children }: Props) => {
     <div className="flex flex-col gap-10 bg-base-style">
       <Header />
       <div className="min-h-screen">
-        <main>
-          <Container>{children}</Container>
-        </main>
+        <Container>{children}</Container>
       </div>
       <Footer />
     </div>

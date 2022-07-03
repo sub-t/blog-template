@@ -33,10 +33,10 @@
   @apply whitespace-nowrap font-mono mx-[2px] py-[2px] px-[3px] rounded-sm text-violet-900 bg-violet-100 dark:text-violet-100 dark:bg-violet-900 !important;
 }
 
-.remark-highlight pre code {
-  @apply m-0 p-0 text-sm text-inherit bg-transparent dark:text-inherit dark:bg-transparent !important;
+.post pre code {
+  @apply whitespace-pre m-0 p-0 text-sm text-inherit bg-transparent dark:text-inherit dark:bg-transparent !important;
 }
 
-.remark-highlight pre {
+.post pre {
   @apply p-4 mb-9 rounded-md !important;
 }

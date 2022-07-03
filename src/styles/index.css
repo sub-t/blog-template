@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('./post.css');
+@import url('./toc.css');
 
 @layer components {
   .text-base-style {

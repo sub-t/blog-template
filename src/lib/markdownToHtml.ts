@@ -1,15 +1,22 @@
-import { remark } from 'remark';
-import externalLinks from 'remark-external-links';
-import gfm from 'remark-gfm';
-import html from 'remark-html';
+import rehypePrism from '@mapbox/rehype-prism';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
+import rehypeSlug from 'rehype-slug';
+import rehypeStringify from 'rehype-stringify';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 
 export default async function markdownToHtml(markdown: string) {
-  const result = await remark()
-    .use(html, { sanitize: false })
-    .use(gfm)
-    .use(externalLinks)
-    .use(require('remark-prism'))
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeExternalLinks, { target: false, rel: ['nofollow'] })
+    .use(rehypePrism)
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings)
+    .use(rehypeStringify)
     .process(markdown);
-    
+
   return result.toString();
 }
