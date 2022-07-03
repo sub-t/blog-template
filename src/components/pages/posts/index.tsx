@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Contents } from '@/components/app/Contents';
 import { Profile } from '@/components/app/Profile';
 import { PostType } from '@/types/post';
 import { Post } from './Post';
@@ -9,25 +10,23 @@ type Props = {
 };
 
 export const Posts: React.VFC<Props> = ({ post }) => (
-  <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-    <div className="lg:col-span-2">
-      <main>
-        <article className="mb-16">
-          <Head>
-            <title>{post.title}</title>
-            <meta property="og:image" content={post.ogImage.url} />
-          </Head>
-          <Post post={post} />
-        </article>
-      </main>
-    </div>
-    <aside>
+  <Contents
+    main={
+      <article>
+        <Head>
+          <title>{post.title}</title>
+          <meta property="og:image" content={post.ogImage.url} />
+        </Head>
+        <Post post={post} />
+      </article>
+    }
+    aside={
       <div className="flex flex-col gap-6 h-full">
         <Profile />
         <div className="lg:top-20 lg:sticky">
           <Toc />
         </div>
       </div>
-    </aside>
-  </div>
+    }
+  />
 );
