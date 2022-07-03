@@ -18,13 +18,15 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
         {title}
       </h1>
       <div className="flex flex-wrap items-center gap-2">
-        <span className='text-base-style'><AiTwotoneTags /></span>
+        <span className="select-none text-base-style">
+          <AiTwotoneTags />
+        </span>
         {tags.map((tag) => (
           <Link key={tag} href={`/tags/${tag}`} passHref>
             <a className="badge">{tag}</a>
           </Link>
         ))}
-        <span className="flex items-center gap-2 text-base-style text-sm">
+        <span className="select-none flex items-center gap-2 text-base-style text-sm">
           <RiTimeFill />
           <DateFormatter dateString={date} />
         </span>

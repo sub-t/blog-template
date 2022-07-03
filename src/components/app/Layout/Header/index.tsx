@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { FiSun } from 'react-icons/fi';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { Container } from '../../Container';
@@ -11,7 +12,9 @@ export const Header = () => {
   return (
     <Container className="sticky top-0 z-10 py-3 backdrop-blur-sm">
       <nav className="flex items-center justify-between">
-        <div className="text-base-style text-3xl font-bold">Blog</div>
+        <Link href="/" passHref>
+          <a className="select-none text-base-style text-3xl font-bold">Blog</a>
+        </Link>
 
         <Nav />
 

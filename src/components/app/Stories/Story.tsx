@@ -12,7 +12,7 @@ type Props = {
 
 export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
-    <div className="overflow-hidden shadow-lg rounded-lg cursor-pointer">
+    <div className="select-none overflow-hidden shadow-lg rounded-lg cursor-pointer">
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <a className="w-full h-full flex">
           <Image
