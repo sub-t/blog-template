@@ -8,7 +8,7 @@ type Props = {
 export const Tags = ({ posts }: Props) => {
   return (
     <main>
-      <div className="mb-12">
+      <div className="p-8 mb-12 bg-base-style">
         <Stories posts={posts} />
       </div>
     </main>

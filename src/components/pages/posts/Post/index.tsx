@@ -10,7 +10,7 @@ export const Post: React.VFC<Props> = ({ post }) => {
   const { title, coverImage, date, tags, content } = post;
 
   return (
-    <>
+    <div className="p-8 bg-base-style">
       <PostHeader
         title={title}
         coverImage={coverImage}
@@ -18,6 +18,6 @@ export const Post: React.VFC<Props> = ({ post }) => {
         tags={tags}
       />
       <PostBody content={content} />
-    </>
+    </div>
   );
 };
