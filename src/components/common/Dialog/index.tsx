@@ -56,7 +56,7 @@ export const DialogContent = React.forwardRef<
                     asChild
                   >
                     <button
-                      className="text-base-style p-4"
+                      className="icon-btn"
                       type="button"
                       aria-label="close"
                       onClick={() => setOpen(false)}

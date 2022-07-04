@@ -11,7 +11,7 @@ import { LinkItem } from './LinkItem';
 export const Hamburger = () => (
   <Dialog>
     <DialogTrigger asChild>
-      <button className="text-base-style p-4" aria-label="hamburger menu">
+      <button className="icon-btn" aria-label="hamburger menu">
         <RiMenu4Line />
       </button>
     </DialogTrigger>
