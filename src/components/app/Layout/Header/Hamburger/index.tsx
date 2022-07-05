@@ -14,7 +14,7 @@ import { LinkItem } from './LinkItem';
 
 export const Hamburger = () => {
   const lg = useBreakPoint('lg');
-  const post = useRouter().pathname.split('/')[1];
+  const post = useRouter().pathname.split('/')[1] === 'posts';
 
   return (
     <DropdownMenu>
