@@ -10,7 +10,6 @@ import {
 } from '@/components/common/DropdownMenu';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
 import { links } from '../config/links';
-import { LinkItem } from './LinkItem';
 
 export const Hamburger = () => {
   const lg = useBreakPoint('lg');
@@ -37,11 +36,12 @@ export const Hamburger = () => {
                   new KeyboardEvent('keydown', { key: 'Escape' }),
                 )
               }
+              className="text-md text-base-style hover:text-indigo-600 hover:dark:text-indigo-400 focus:text-indigo-600 focus:dark:text-indigo-400 capitalize select-none cursor-pointer"
             >
               <Link href={href} passHref>
-                <LinkItem>
+                <a className="hstack gap-3 py-3 px-6">
                   {icon} {name}
-                </LinkItem>
+                </a>
               </Link>
             </DropdownMenuItem>
           ))}
