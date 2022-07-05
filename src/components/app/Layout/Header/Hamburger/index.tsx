@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { RiMenu4Line } from 'react-icons/ri';
 import { Toc } from '@/components/app/Toc';
 import {
@@ -13,6 +14,7 @@ import { LinkItem } from './LinkItem';
 
 export const Hamburger = () => {
   const lg = useBreakPoint('lg');
+  const post = useRouter().pathname.split('/')[1];
 
   return (
     <DropdownMenu>
@@ -44,7 +46,7 @@ export const Hamburger = () => {
             </DropdownMenuItem>
           ))}
         </div>
-        {lg ? null : (
+        {lg || !post ? null : (
           <div
             role="button"
             tabIndex={0}
