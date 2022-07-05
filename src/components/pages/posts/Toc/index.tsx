@@ -8,6 +8,7 @@ export const Toc: React.VFC = () => {
       tocSelector: '.toc',
       contentSelector: '.post',
       headingSelector: 'h1, h2, h3',
+      scrollSmoothOffset: -80,
     });
 
     return () => tocbot.destroy();

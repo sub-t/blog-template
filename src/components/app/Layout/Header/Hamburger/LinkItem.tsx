@@ -8,7 +8,7 @@ export const LinkItem = React.forwardRef<
   <Slot {...props}>
     <a
       ref={forwardedRef}
-      className="px-5 py-2 text-2xl text-base-style capitalize select-none cursor-pointer"
+      className="hstack gap-3 py-3 px-6 text-md text-base-style hover:text-indigo-600 hover:dark:text-indigo-400 capitalize select-none cursor-pointer"
     >
       {children}
     </a>

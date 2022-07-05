@@ -1,8 +1,9 @@
-import { SiGithub, SiTwitter, SiZenn } from 'react-icons/si';
+import { Slot } from '@radix-ui/react-slot';
 import { Image } from '@/components/common/Image';
+import { sns } from '../config/sns';
 
 export const Profile = () => (
-  <div className="vstack items-center gap-5 p-6 bg-base-style">
+  <div className="select-none vstack items-center gap-5 p-6 bg-base-style">
     <div className="vstack items-center gap-2">
       <Image
         className="object-cover w-28 h-28 rounded-full bg-white"
@@ -18,17 +19,11 @@ export const Profile = () => (
     </p>
 
     <div className="flex gap-4">
-      <div className="text-base-style">
-        <SiZenn size={20} />
-      </div>
-
-      <div className="text-base-style">
-        <SiGithub size={20} />
-      </div>
-
-      <div className="text-base-style">
-        <SiTwitter size={20} />
-      </div>
+      {sns.map(({ icon }, idx) => (
+        <Slot key={idx} {...{ size: 20 }} className="text-base-style">
+          {icon}
+        </Slot>
+      ))}
     </div>
   </div>
 );
