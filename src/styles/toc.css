@@ -7,7 +7,7 @@
 }
 
 .toc-link {
-  @apply text-base font-bold text-slate-400 dark:text-slate-600;
+  @apply text-base font-bold text-slate-400 dark:text-slate-600 hover:text-indigo-700 dark:hover:text-indigo-400;
 }
 
 .toc-list .toc-list .toc-link {
