@@ -1,9 +1,9 @@
 .toc-list {
-  @apply flex flex-col gap-3;
+  @apply vstack  gap-3;
 }
 
 .toc-list .toc-list {
-  @apply flex flex-col gap-2 pl-4 mt-1;
+  @apply vstack  gap-2 pl-4 mt-1;
 }
 
 .toc-link {

@@ -20,4 +20,18 @@
   .badge {
     @apply select-none text-xs flex items-center font-bold px-3 py-1 bg-black text-white;
   }
+
+  /* utils */
+  .vstack {
+    @apply flex flex-col;
+  }
+  .hstack {
+    @apply flex items-center;
+  }
+  .wrap {
+    @apply hstack flex-wrap;
+  }
+  .center {
+    @apply flex items-center justify-center;
+  }
 }

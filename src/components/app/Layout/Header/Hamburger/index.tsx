@@ -15,7 +15,7 @@ export const Hamburger = () => (
         <RiMenu4Line />
       </button>
     </DialogTrigger>
-    <DialogContent className="w-4/5 h-4/5 flex flex-col justify-center items-center gap-3 bg-base-style rounded-lg">
+    <DialogContent className="w-4/5 h-4/5 vstack justify-center items-center gap-3 bg-base-style rounded-lg">
       {links.map(({ name, href }) => (
         <Link key={name} href={href} passHref>
           <LinkItem>{name}</LinkItem>

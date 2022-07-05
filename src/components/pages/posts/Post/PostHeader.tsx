@@ -13,12 +13,12 @@ type Props = {
 
 export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="vstack gap-6">
       <Image src={coverImage} alt={`Cover Image for ${title}`} />
       <h1 className="text-base-style text-3xl md:text-4xl font-bold tracking-tighter leading-tight">
         {title}
       </h1>
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="wrap gap-2">
         <span className="select-none text-base-style">
           <AiTwotoneTags />
         </span>
@@ -27,7 +27,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
             <a className="badge">{tag}</a>
           </Link>
         ))}
-        <span className="select-none flex items-center gap-2 text-base-style text-sm">
+        <span className="select-none hstack gap-2 text-base-style text-sm">
           <RiTimeFill />
           <DateFormatter dateString={date} />
         </span>

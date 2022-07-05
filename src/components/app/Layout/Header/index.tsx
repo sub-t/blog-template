@@ -11,7 +11,7 @@ export const Header = () => {
 
   return (
     <Container className="sticky top-0 z-10 py-3 backdrop-blur-sm">
-      <nav className="flex items-center justify-between">
+      <nav className="hstack justify-between">
         <Link href="/" passHref>
           <a className="select-none text-base-style text-2xl md:text-3xl font-bold">
             Blog

@@ -21,9 +21,9 @@ export const Posts: React.VFC<Props> = ({ post }) => (
       </article>
     }
     aside={
-      <div className="flex flex-col gap-6 h-full">
+      <div className="vstack gap-6 h-full">
         <Profile />
-        <div className="lg:top-20 lg:sticky">
+        <div className="hidden lg:block lg:top-20 lg:sticky">
           <Toc />
         </div>
       </div>
