@@ -33,7 +33,7 @@ export const DialogContent = React.forwardRef<
 
   return (
     <AnimatePresence>
-      {open ? (
+      {open && (
         <DialogPrimitive.DialogPortal forceMount>
           <div className="absolute inset-0">
             <MotionSlot {...animationConfig}>
@@ -69,7 +69,7 @@ export const DialogContent = React.forwardRef<
             </MotionSlot>
           </div>
         </DialogPrimitive.DialogPortal>
-      ) : null}
+      )}
     </AnimatePresence>
   );
 });

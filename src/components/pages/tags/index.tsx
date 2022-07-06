@@ -1,4 +1,6 @@
-import { DefaultContents } from '@/components/app/Contents/DefaultContents';
+import { Contents } from '@/components/app/Contents';
+import { Profile } from '@/components/app/Profile';
+import { Stories } from '@/components/app/Stories';
 import { PostType } from '@/types/post';
 
 type Props = {
@@ -6,5 +8,14 @@ type Props = {
 };
 
 export const Tags: React.VFC<Props> = ({ posts }) => {
-  return <DefaultContents posts={posts} />;
+  return (
+    <Contents
+      main={
+        <div className="p-8 mb-12 bg-base-style">
+          <Stories posts={posts} />
+        </div>
+      }
+      aside={<Profile />}
+    />
+  );
 };

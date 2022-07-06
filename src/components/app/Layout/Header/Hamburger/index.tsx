@@ -46,7 +46,7 @@ export const Hamburger = () => {
             </DropdownMenuItem>
           ))}
         </div>
-        {lg || !post ? null : (
+        {lg || !post || (
           <div
             role="button"
             tabIndex={0}

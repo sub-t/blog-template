@@ -40,7 +40,7 @@ export const DropdownMenuContent = React.forwardRef<
 
   return (
     <AnimatePresence>
-      {open ? (
+      {open && (
         <MotionSlot {...animationConfig}>
           <Slot {...props}>
             <DropdownMenuPrimitive.Content ref={forwardedRef} forceMount>
@@ -48,7 +48,7 @@ export const DropdownMenuContent = React.forwardRef<
             </DropdownMenuPrimitive.Content>
           </Slot>
         </MotionSlot>
-      ) : null}
+      )}
     </AnimatePresence>
   );
 });

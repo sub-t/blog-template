@@ -13,7 +13,7 @@ const View = ({ posts }: Props) => {
 export default View;
 
 export const getStaticProps = async () => {
-  const posts = getAllPosts(['title', 'date', 'slug', 'coverImage', 'excerpt']);
+  const posts = getAllPosts(['title', 'date', 'slug', 'coverImage', 'excerpt']).slice(0, 4);
 
   return {
     props: { posts },
