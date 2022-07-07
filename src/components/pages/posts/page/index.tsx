@@ -1,7 +1,7 @@
 import { Contents } from '@/components/app/Contents';
-import { Pagination } from '@/components/app/Pagination';
-import { Profile } from '@/components/app/Profile';
-import { Stories } from '@/components/app/Stories';
+import { Profile } from '@/components/features/Profile';
+import { Stories } from '@/components/features/Stories';
+import { Pagination } from '@/components/features/Pagination';
 import { PostType } from '@/types/post';
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 export const Page: React.VFC<Props> = ({ posts, maxPage }) => (
   <Contents
     main={
-      <div className="vstack gap-10 p-8 mb-12 bg-base-style">
+      <div className="vstack gap-10 p-8 bg-base-style">
         <Stories posts={posts} />
         <Pagination maxPage={maxPage} />
       </div>

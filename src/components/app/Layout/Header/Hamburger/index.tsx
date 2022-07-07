@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiMenu4Line } from 'react-icons/ri';
-import { Toc } from '@/components/app/Toc';
+import { Toc } from '@/components/features/Toc';
 import {
   DropdownMenu,
   DropdownMenuTrigger,

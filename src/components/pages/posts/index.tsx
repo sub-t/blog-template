@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { Contents } from '@/components/app/Contents';
-import { Profile } from '@/components/app/Profile';
+import { Profile } from '@/components/features/Profile';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
 import { PostType } from '@/types/post';
-import { Toc } from '../../app/Toc';
+import { Toc } from '../../features/Toc';
 import { Post } from './Post';
 
 type Props = {

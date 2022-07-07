@@ -1,8 +1,6 @@
-import {
-  getMaxPage,
-  paginationOffset,
-} from '@/components/app/Pagination/config';
 import { Page } from '@/components/pages/posts/page';
+import { paginationOffset } from '@/components/features/Pagination/config';
+import { getMaxPage } from '@/components/features/Pagination/utils';
 import { getAllPosts, postNum } from '@/lib/api';
 import { PostType } from '@/types/post';
 

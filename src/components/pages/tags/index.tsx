@@ -1,18 +1,31 @@
+import Link from 'next/link';
+import { AiTwotoneTags } from 'react-icons/ai';
 import { Contents } from '@/components/app/Contents';
-import { Profile } from '@/components/app/Profile';
-import { Stories } from '@/components/app/Stories';
-import { PostType } from '@/types/post';
+import { Profile } from '@/components/features/Profile';
 
 type Props = {
-  posts: PostType[];
+  tags: string[];
 };
 
-export const Tags: React.VFC<Props> = ({ posts }) => {
+export const Tags: React.VFC<Props> = ({ tags }) => {
   return (
     <Contents
       main={
-        <div className="p-8 mb-12 bg-base-style">
-          <Stories posts={posts} />
+        <div className="vstack gap-10 p-8 bg-base-style">
+          <div className="center">
+            <h2 className="center gap-2 py-2 px-3 border-b-2 border-indigo-700 dark:border-indigo-400 text-xl font-bold text-base-style">
+              <AiTwotoneTags />
+              タグ
+            </h2>
+          </div>
+
+          <div className="wrap gap-3">
+            {tags.map((tag) => (
+              <Link key={tag} href={`/tags/${tag}`} passHref>
+                <a className="badge">{tag}</a>
+              </Link>
+            ))}
+          </div>
         </div>
       }
       aside={<Profile />}
