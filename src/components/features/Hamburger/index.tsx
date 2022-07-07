@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { RiMenu4Line } from 'react-icons/ri';
 import {
   DropdownMenu,
@@ -7,19 +6,21 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from '@/components/common/DropdownMenu';
-import { Toc } from '@/components/features/Toc';
-import { useBreakPoint } from '@/hooks/useBreakPoint';
-import { links } from '../../config/links';
+import { links } from '../config/links';
 
-export const Hamburger = () => {
-  const lg = useBreakPoint('lg');
-  const post = useRouter().pathname.split('/')[1] === 'posts';
+type Props = {
+  children?: React.ReactNode;
+};
 
+export const Hamburger: React.VFC<Props> = ({ children }) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="icon-btn" aria-label="hamburger menu">
-          <RiMenu4Line />
+        <button
+          className="icon-btn rounded-full bg-white dark:bg-black shadow-xl"
+          aria-label="hamburger menu"
+        >
+          <RiMenu4Line size={28} />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -46,21 +47,7 @@ export const Hamburger = () => {
             </DropdownMenuItem>
           ))}
         </div>
-        {lg || !post || (
-          <div
-            role="button"
-            tabIndex={0}
-            onClick={() =>
-              document.dispatchEvent(
-                new KeyboardEvent('keydown', { key: 'Escape' }),
-              )
-            }
-            onKeyDown={() => {}}
-            className="overflow-y-auto cursor-default"
-          >
-            <Toc />
-          </div>
-        )}
+        {children}
       </DropdownMenuContent>
     </DropdownMenu>
   );

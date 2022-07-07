@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { FiSun } from 'react-icons/fi';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { Container } from '../../common/Container';
-import { Hamburger } from './components/Hamburger';
 import { NavBar } from './components/NavBar';
 
 export const Header = () => {
@@ -31,10 +30,6 @@ export const Header = () => {
           >
             <FiSun />
           </button>
-
-          <div className="flex lg:hidden">
-            <Hamburger />
-          </div>
         </div>
       </nav>
     </Container>

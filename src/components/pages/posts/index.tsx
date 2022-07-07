@@ -34,6 +34,21 @@ export const Posts: React.VFC<Props> = ({ post }) => {
           )}
         </div>
       }
+      hamburgerMenu={
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() =>
+            document.dispatchEvent(
+              new KeyboardEvent('keydown', { key: 'Escape' }),
+            )
+          }
+          onKeyDown={() => {}}
+          className="overflow-y-auto cursor-default"
+        >
+          <Toc />
+        </div>
+      }
     />
   );
 };
