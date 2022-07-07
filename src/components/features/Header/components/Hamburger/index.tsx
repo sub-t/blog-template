@@ -9,7 +9,7 @@ import {
 } from '@/components/common/DropdownMenu';
 import { Toc } from '@/components/features/Toc';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
-import { links } from '../config/links';
+import { links } from '../../config/links';
 
 export const Hamburger = () => {
   const lg = useBreakPoint('lg');
