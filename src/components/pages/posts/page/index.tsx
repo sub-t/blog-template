@@ -1,7 +1,7 @@
-import { Contents } from '@/components/app/Contents';
 import { Pagination } from '@/components/features/Pagination';
 import { Profile } from '@/components/features/Profile';
 import { Stories } from '@/components/features/Stories';
+import { Contents } from '@/components/pages/app';
 import { PostType } from '@/types/post';
 
 type Props = {

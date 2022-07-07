@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FiSun } from 'react-icons/fi';
 import { useDarkMode } from '@/hooks/useDarkMode';
-import { Container } from '../Container';
+import { Container } from '../../common/Container';
 import { Hamburger } from './Hamburger';
 import { NavBar } from './NavBar';
 

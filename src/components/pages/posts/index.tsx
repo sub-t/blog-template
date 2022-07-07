@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { Contents } from '@/components/app/Contents';
 import { Profile } from '@/components/features/Profile';
+import { Contents } from '@/components/pages/app';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
 import { PostType } from '@/types/post';
 import { Toc } from '../../features/Toc';

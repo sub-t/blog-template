@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { AiTwotoneTags } from 'react-icons/ai';
-import { Contents } from '@/components/app/Contents';
 import { Profile } from '@/components/features/Profile';
+import { Contents } from '@/components/pages/app';
 
 type Props = {
   tags: string[];

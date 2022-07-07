@@ -83,7 +83,7 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '{@/libs/**,@/features/**,@/app/**}',
+            pattern: '{@/libs/**,@/features/**,@/app',
             group: 'internal',
             position: 'before',
           },
