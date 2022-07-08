@@ -1,14 +1,9 @@
-import { Tag } from '@/components/pages/tags/tag';
+import { Tag } from '@/features/stories';
 import { getAllPosts } from '@/lib/api';
-import { PostType } from '@/types/post';
 
-type Props = {
-  posts: PostType[];
-};
+type Props = React.ComponentPropsWithoutRef<typeof Tag>;
 
-const View = ({ posts }: Props) => {
-  return <Tag posts={posts} />;
-};
+const View: React.VFC<Props> = (props: Props) => <Tag {...props} />;
 
 export default View;
 

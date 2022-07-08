@@ -1,21 +1,10 @@
-import ErrorPage from 'next/error';
-import { useRouter } from 'next/router';
-import { Posts } from '@/components/pages/posts';
+import { Posts } from '@/features/post';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
-import { PostType } from '@/types/post';
 
-type Props = {
-  post: PostType;
-};
+type Props = React.ComponentPropsWithoutRef<typeof Posts>;
 
-const View = ({ post }: Props) => {
-  const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
-  return <Posts post={post} />;
-};
+const View: React.VFC<Props> = (props: Props) => <Posts {...props} />;
 
 export default View;
 
@@ -34,7 +23,7 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
     'coverImage',
-    'tags'
+    'tags',
   ]);
   const content = await markdownToHtml(post.content || '');
 
