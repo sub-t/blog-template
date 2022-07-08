@@ -13,7 +13,7 @@ export const Profile = () => (
       <h1 className="text-2xl font-semibold text-base-style">subt</h1>
     </div>
 
-    <p className="text-gray-700 dark:text-gray-400">
+    <p className="text-base-style">
       Full Stack maker & UI / UX Designer , love hip hop music Author of
       Building UI.
     </p>
