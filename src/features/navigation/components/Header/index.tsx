@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { FiSun } from 'react-icons/fi';
+import { Container } from '@/components/Container';
 import { useDarkMode } from '@/hooks/useDarkMode';
-import { Container } from '../../../../components/common/Container';
 import { NavBar } from './components/NavBar';
 
 export const Header = () => {

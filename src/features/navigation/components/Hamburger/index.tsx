@@ -5,7 +5,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from '@/components/common/DropdownMenu';
+} from '@/components/DropdownMenu';
 import { links } from '../../config/links';
 
 type Props = {

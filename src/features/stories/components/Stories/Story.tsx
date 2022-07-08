@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { DateFormatter } from '../../../../components/common/DateFormatter';
-import { Image } from '../../../../components/common/Image';
+import { DateFormatter } from '@/components/DateFormatter';
+import { Image } from '@/components/Image';
 
 type Props = {
   title: string;
@@ -14,7 +14,7 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
       <a className="select-none overflow-hidden w-full h-full vstack md:flex-row cursor-pointer focus:outline-2 ">
-        <div className='center w-full md:w-1/3 md:h-full bg-gray-50 md:bg-transparent'>
+        <div className="center w-full md:w-1/3 md:h-full bg-gray-50 md:bg-transparent">
           <Image
             src={coverImage}
             alt={`Cover Image for ${title}`}

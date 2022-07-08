@@ -1,5 +1,5 @@
 import { Slot } from '@radix-ui/react-slot';
-import { Image } from '@/components/common/Image';
+import { Image } from '@/components/Image';
 import { sns } from '../config/sns';
 
 export const Profile = () => (
