@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Contents } from '@/components/common/Contents';
+import { MoreButton } from '@/components/common/MoreButton';
 import { Profile } from '@/components/common/Profile';
 import { Stories } from '@/components/common/Stories';
 import { PostType } from '@/types/post';
@@ -12,11 +13,13 @@ export const Home: React.VFC<Props> = ({ posts }) => {
   return (
     <Contents
       main={
-        <div className="p-8 bg-primary-1">
+        <div className="vstack gap-12 p-8 bg-primary-1">
           <Stories posts={posts} />
           {/* TODO */}
           <Link href="posts/page/1" passHref>
-            <a>もっと見る</a>
+            <a>
+              <MoreButton />
+            </a>
           </Link>
         </div>
       }

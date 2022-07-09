@@ -17,7 +17,6 @@
   .text-accent-1 {
     @apply text-teal-800 dark:text-teal-400;
   }
-
   .icon-btn {
     @apply text-primary-1 p-3;
   }
