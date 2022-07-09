@@ -7,7 +7,7 @@
 }
 
 .toc-link {
-  @apply text-base font-bold text-neutral-400 dark:text-neutral-400 hover:text-teal-800 dark:hover:text-teal-400;
+  @apply text-sm sm:text-base font-bold text-neutral-400 dark:text-neutral-400 hover:text-teal-800 dark:hover:text-teal-400;
 }
 
 .toc-list .toc-list .toc-link {

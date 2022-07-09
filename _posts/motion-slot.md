@@ -37,9 +37,8 @@ https://www.radix-ui.com/docs/primitives/utilities/slot
 
 `Slot`本体は消えるものの、propsを介して任意のコンポーネントに機能を与えられるという点が重要です。余分な`div`を生成することはありません。
 
-詳しくはこちらを参照ください。
-
-https://zenn.dev/subt/articles/b6aa48ccb0c884
+詳しくは[こちら](https://zenn.dev/subt/articles/b6aa48ccb0c884
+)を参照ください。
 
 ### Framer Motion
 
@@ -78,9 +77,8 @@ const MotionComponent = motion(Component);
 
 ## 具体例
 
-`motion(Slot)`を使って、みんな大好き「ふわっ」が手軽に実装できるようにしましょう。
+`motion(Slot)`を使って、みんな大好き「[ふわっ](https://qiita.com/yuneco/items/24a209cb14661b8a7a20)」が手軽に実装できるようにしましょう。
 
-https://qiita.com/yuneco/items/24a209cb14661b8a7a20
 
 ### 実装
 

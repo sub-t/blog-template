@@ -13,12 +13,12 @@ type Props = {
 
 export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
   return (
-    <div className="vstack gap-6">
+    <div className="vstack gap-4">
       <Image src={coverImage} alt={`Cover Image for ${title}`} />
       <h1 className="text-primary-1 text-3xl md:text-4xl font-bold tracking-tighter leading-tight">
         {title}
       </h1>
-      <div className="wrap gap-6">
+      <div className="wrap gap-4">
         <span className="select-none hstack gap-2 text-md font-bold text-accent-1">
           <RiTimeFill />
           <DateFormatter dateString={date} />
