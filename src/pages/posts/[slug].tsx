@@ -1,4 +1,4 @@
-import { Posts } from '@/features/post';
+import { Posts } from '@/components/pages/posts';
 import { getPostBySlug, getAllPosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 

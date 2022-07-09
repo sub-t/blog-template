@@ -1,7 +1,7 @@
 import { DefaultSeo } from 'next-seo';
 import { defaultSeo } from 'next-seo.config';
 import { AppProps } from 'next/app';
-import { Layout } from '@/features/app';
+import { Layout } from '@/components/features/app';
 import { useRoutePath } from '@/hooks/useRoutePath';
 import '@/styles/index.css';
 

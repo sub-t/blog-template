@@ -1,4 +1,4 @@
-import { Tag } from '@/features/stories';
+import { Tag } from '@/components/pages/tag';
 import { getAllPosts } from '@/lib/api';
 
 type Props = React.ComponentPropsWithoutRef<typeof Tag>;

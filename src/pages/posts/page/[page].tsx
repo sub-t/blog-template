@@ -1,5 +1,5 @@
-import { paginationOffset, getMaxPage } from '@/features/pagination';
-import { Page } from '@/features/stories';
+import { paginationOffset, getMaxPage } from '@/components/features/pagination';
+import { Page } from '@/components/pages/page';
 import { getAllPosts, postNum } from '@/lib/api';
 
 type Props = React.ComponentPropsWithoutRef<typeof Page>;

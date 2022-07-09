@@ -1,4 +1,4 @@
-import { Home } from '@/features/stories';
+import { Home } from '@/components/pages/home';
 import { getAllPosts } from '@/lib/api';
 
 type Props = React.ComponentPropsWithoutRef<typeof Home>;
