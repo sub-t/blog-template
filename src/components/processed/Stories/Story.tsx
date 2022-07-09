@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { DateFormatter } from '@/components/materials/DateFormatter';
-import { Image } from '@/components/materials/Image';
+import { DateFormatter } from '@/components/material/DateFormatter';
+import { Image } from '@/components/material/Image';
 
 type Props = {
   title: string;

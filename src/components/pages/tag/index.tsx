@@ -1,6 +1,6 @@
-import { Contents } from '@/components/common/Contents';
-import { Profile } from '@/components/common/Profile';
-import { Stories } from '@/components/common/Stories';
+import { Contents } from '@/components/processed/Contents';
+import { Profile } from '@/components/processed/Profile';
+import { Stories } from '@/components/processed/Stories';
 import { PostType } from '@/types/post';
 
 type Props = {

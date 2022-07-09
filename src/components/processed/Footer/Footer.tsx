@@ -1,4 +1,4 @@
-import { Container } from '@/components/common/Container';
+import { Container } from '@/components/processed/Container';
 import { PATH } from '@/lib/constants';
 
 export const Footer = () => {

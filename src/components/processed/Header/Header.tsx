@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FiSun } from 'react-icons/fi';
-import { Container } from '@/components/common/Container';
+import { Container } from '@/components/processed/Container';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { NavBar } from './NavBar';
 
