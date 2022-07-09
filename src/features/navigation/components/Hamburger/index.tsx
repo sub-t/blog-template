@@ -26,7 +26,7 @@ export const Hamburger: React.VFC<Props> = ({ children }) => {
       <DropdownMenuContent
         sideOffset={8}
         collisionTolerance={16}
-        className="vstack gap-2 max-h-80 bg-base-style rounded-lg shadow-lg"
+        className="vstack gap-2 max-h-80 bg-primary-1 rounded-lg shadow-lg"
       >
         <div className="center">
           {links.map(({ name, href, icon }) => (
@@ -37,7 +37,7 @@ export const Hamburger: React.VFC<Props> = ({ children }) => {
                   new KeyboardEvent('keydown', { key: 'Escape' }),
                 )
               }
-              className="text-md text-base-style hover:text-indigo-600 hover:dark:text-indigo-400 focus:text-indigo-600 focus:dark:text-indigo-400 capitalize select-none cursor-pointer"
+              className="text-md text-primary-1 hover:text-teal-800 hover:dark:text-teal-400 focus:text-teal-800 focus:dark:text-teal-400 capitalize select-none cursor-pointer"
             >
               <Link href={href} passHref>
                 <a className="hstack gap-3 py-3 px-6">

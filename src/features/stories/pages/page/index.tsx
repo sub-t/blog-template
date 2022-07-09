@@ -16,7 +16,7 @@ export const Page: React.VFC<Props> = ({ posts, maxPage }) => {
   return (
     <Contents
       main={
-        <div className="vstack gap-10 p-8 bg-base-style">
+        <div className="vstack gap-10 p-8 bg-primary-1">
           <Stories posts={posts} />
           <Pagination maxPage={maxPage} currentPage={currentPage} />
         </div>

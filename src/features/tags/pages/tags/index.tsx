@@ -11,9 +11,9 @@ export const Tags: React.VFC<Props> = ({ tags }) => {
   return (
     <Contents
       main={
-        <div className="vstack gap-10 p-8 bg-base-style">
+        <div className="vstack gap-10 p-8 bg-primary-1">
           <div className="center">
-            <h2 className="center gap-2 py-2 px-3 border-b-2 border-indigo-700 dark:border-indigo-400 text-xl font-bold text-base-style">
+            <h2 className="center gap-2 py-2 px-3 border-b-2 border-teal-800 dark:border-teal-400 text-xl font-bold text-primary-1">
               <AiTwotoneTags />
               タグ
             </h2>

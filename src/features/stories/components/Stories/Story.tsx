@@ -21,11 +21,11 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
             className="max-w-xs h-52 md:h-full object-cover"
           />
         </div>
-        <div className="md:w-2/3 p-4 md:p-6 vstack gap-2 bg-base-style">
-          <div className="text-indigo-500 text-md font-medium">
+        <div className="md:w-2/3 p-4 md:p-6 vstack gap-2 bg-primary-1">
+          <div className="text-accent-1 text-md font-medium">
             <DateFormatter dateString={date} />
           </div>
-          <h3 className="text-base-style text-xl font-medium">{title}</h3>
+          <h3 className="text-primary-1 text-xl font-medium">{title}</h3>
           <p className="text-gray-400 dark:text-gray-300 font-light text-md line-clamp-2 md:line-clamp-3">
             {excerpt}
           </p>

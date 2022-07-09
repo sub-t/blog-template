@@ -8,20 +8,25 @@
   .bg-global {
     @apply bg-neutral-50 dark:bg-neutral-900;
   }
-  .bg-base-style {
+  .bg-primary-1 {
     @apply bg-white dark:bg-neutral-800;
   }
-  .text-base-style {
+  .text-primary-1 {
     @apply text-neutral-800 dark:text-white;
   }
+  .text-accent-1 {
+    @apply text-teal-800 dark:text-teal-400;
+  }
+
   .icon-btn {
-    @apply text-base-style p-3;
+    @apply text-primary-1 p-3;
   }
   .badge {
     @apply select-none text-xs flex items-center font-bold px-3 py-1 bg-black text-white;
   }
+}
 
-  /* utils */
+@layer utilities {
   .vstack {
     @apply flex flex-col;
   }

@@ -1,11 +1,11 @@
 @import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
 .post {
-  @apply my-5 text-base font-medium text-base-style !important;
+  @apply my-5 text-base font-medium text-neutral-800 dark:text-white !important;
 }
 
 .post a {
-  @apply text-blue-600 dark:text-blue-400 !important;
+  @apply text-teal-800 dark:text-teal-400 !important;
 }
 
 .post p {
@@ -30,7 +30,7 @@
 
 .post code {
   font-size: max(12px, 85%) !important;
-  @apply whitespace-nowrap font-mono mx-[2px] py-[2px] px-[3px] rounded-sm text-violet-900 bg-violet-100 dark:text-violet-100 dark:bg-violet-900 !important;
+  @apply whitespace-nowrap font-mono mx-[2px] py-[2px] px-[3px] rounded-sm text-teal-900 bg-teal-100 dark:text-teal-100 dark:bg-teal-900 !important;
 }
 
 .post pre code {

@@ -11,7 +11,7 @@ export const Tag: React.VFC<Props> = ({ posts }) => {
   return (
     <Contents
       main={
-        <div className="p-8 bg-base-style">
+        <div className="p-8 bg-primary-1">
           <Stories posts={posts} />
         </div>
       }
