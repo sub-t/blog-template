@@ -15,7 +15,6 @@ export const Home: React.VFC<Props> = ({ posts }) => {
       main={
         <div className="vstack gap-12 p-8 bg-primary-1">
           <Stories posts={posts} />
-          {/* TODO */}
           <Link href="posts/page/1" passHref>
             <a>
               <MoreButton />
