@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Contents } from '@/components/features/app';
-import { Profile } from '@/components/features/profile';
-import { Stories } from '@/components/features/stories';
+import { Contents } from '@/components/common/Contents';
+import { Profile } from '@/components/common/Profile';
+import { Stories } from '@/components/common/Stories';
 import { PostType } from '@/types/post';
 
 type Props = {

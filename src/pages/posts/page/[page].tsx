@@ -1,6 +1,6 @@
-import { paginationOffset, getMaxPage } from '@/components/features/pagination';
 import { Page } from '@/components/pages/page';
-import { getAllPosts, postNum } from '@/lib/api';
+import { paginationOffset } from '@/config/pagination';
+import { getAllPosts, getMaxPage } from '@/lib/api';
 
 type Props = React.ComponentPropsWithoutRef<typeof Page>;
 
@@ -26,13 +26,13 @@ export const getStaticProps = async ({ params }: Params) => {
   ]).slice((page - 1) * paginationOffset, page * paginationOffset);
 
   return {
-    props: { posts, maxPage: getMaxPage(postNum) },
+    props: { posts, maxPage: getMaxPage() },
   };
 };
 
 export async function getStaticPaths() {
   const pages = Array.from({
-    length: getMaxPage(postNum),
+    length: getMaxPage(),
   }).map((_, idx) => (idx + 1).toString());
 
   return {

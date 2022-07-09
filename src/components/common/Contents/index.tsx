@@ -1,5 +1,5 @@
 import { Portal } from '@radix-ui/react-portal';
-import { Hamburger } from '@/components/features/navigation/components/Hamburger';
+import { Hamburger } from '@/components/common/Hamburger';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
 
 type Props = {

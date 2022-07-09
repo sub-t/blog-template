@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import { paginationOffset } from '@/config/pagination';
 import { PostType } from '@/types/post';
 
 const postsDirectory = join(process.cwd(), '_posts').replaceAll('\\', '/');
@@ -9,7 +10,10 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-export const postNum = getPostSlugs().length;
+export const getMaxPage = () => {
+  const postNum = getPostSlugs().length;
+  return Math.ceil(postNum / paginationOffset);
+};
 
 export function getPostBySlug(slug: string, fields: string[] = []) {
   const realSlug = slug.replace(/\.md$/, '');

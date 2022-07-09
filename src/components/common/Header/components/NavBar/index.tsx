@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { links } from '@/components/features/navigation/config/links';
+import { links } from '@/config/links';
 
 export const NavBar = () => {
   return (

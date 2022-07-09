@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import { Contents } from '@/components/features/app';
-import { Post } from '@/components/features/post';
-import { Profile } from '@/components/features/profile/components/Profile';
-import { Toc } from '@/components/features/toc/components/Toc';
+import { Contents } from '@/components/common/Contents';
+import { Post } from '@/components/common/Post';
+import { Profile } from '@/components/common/Profile';
+import { Toc } from '@/components/common/Toc';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
 import { PostType } from '@/types/post';
 

@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
-import { Contents } from '@/components/features/app';
-import { Pagination } from '@/components/features/pagination';
-import { Profile } from '@/components/features/profile';
-import { Stories } from '@/components/features/stories';
+import { Contents } from '@/components/common/Contents';
+import { Pagination } from '@/components/common/Pagination';
+import { Profile } from '@/components/common/Profile';
+import { Stories } from '@/components/common/Stories';
 import { PostType } from '@/types/post';
 
 type Props = {

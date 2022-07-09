@@ -5,8 +5,8 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from '@/components/common/DropdownMenu';
-import { links } from '../../config/links';
+} from '@/components/materials/DropdownMenu';
+import { links } from '../../../config/links';
 
 type Props = {
   children?: React.ReactNode;

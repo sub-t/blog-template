@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { AiTwotoneTags } from 'react-icons/ai';
 import { RiTimeFill } from 'react-icons/ri';
-import { DateFormatter } from '@/components/common/DateFormatter';
-import { Image } from '@/components/common/Image';
+import { DateFormatter } from '@/components/materials/DateFormatter';
+import { Image } from '@/components/materials/Image';
 
 type Props = {
   title: string;
