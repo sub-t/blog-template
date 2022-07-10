@@ -14,11 +14,11 @@ export const Story = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
       <a className="select-none overflow-hidden w-full h-full vstack md:flex-row cursor-pointer focus:outline-2 ">
-        <div className="center w-full md:w-1/3 md:h-full bg-neutral-50 md:bg-transparent">
+        <div className="center w-full md:w-1/3 h-52 md:h-full bg-neutral-50 md:bg-transparent">
           <Image
             src={coverImage}
             alt={`Cover Image for ${title}`}
-            className="w-full max-w-xs h-52 md:h-full object-cover"
+            className="w-full max-w-xs h-full object-cover"
           />
         </div>
         <div className="md:w-2/3 p-4 md:p-6 vstack gap-2 bg-primary-1">
