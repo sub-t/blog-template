@@ -19,7 +19,7 @@ export const Contents: React.VFC<Props> = ({ main, aside, hamburgerMenu }) => {
       <aside>{aside}</aside>
       {lg || (
         <Portal>
-          <div className="fixed right-6 bottom-6">
+          <div className="fixed left-8 bottom-8">
             <Hamburger>{hamburgerMenu}</Hamburger>
           </div>
         </Portal>

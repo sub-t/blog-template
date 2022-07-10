@@ -1,1 +1,1 @@
-export const paginationOffset = 8;
+export const paginationOffset = 2;
