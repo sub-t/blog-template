@@ -14,7 +14,11 @@ export const Cell: React.VFC<Props> = ({ cell, page, count }) => {
     case '<':
       return (
         <ConditionalLink condition={page > 1} href={`/posts/page/${page - 1}`}>
-          <StyledCell variant="arrow">{cell}</StyledCell>
+          <button type="button" aria-label="前に戻る" disabled={page === 1}>
+            <StyledCell variant="arrow" disabled={page === 1}>
+              {cell}
+            </StyledCell>
+          </button>
         </ConditionalLink>
       );
     case '>':
@@ -23,7 +27,11 @@ export const Cell: React.VFC<Props> = ({ cell, page, count }) => {
           condition={page < count}
           href={`/posts/page/${page + 1}`}
         >
-          <StyledCell variant="arrow">{cell}</StyledCell>
+          <button type="button" aria-label="次に進む" disabled={page === count}>
+            <StyledCell variant="arrow" disabled={page === count}>
+              {cell}
+            </StyledCell>
+          </button>
         </ConditionalLink>
       );
     case '...':

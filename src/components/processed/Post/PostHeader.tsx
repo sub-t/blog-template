@@ -1,8 +1,7 @@
 import { AiTwotoneTags } from 'react-icons/ai';
-import { RiTimeFill } from 'react-icons/ri';
-import { DateFormatter } from '@/components/material/DateFormatter';
 import { Image } from '@/components/material/Image';
 import { Link } from '@/components/material/Link';
+import { Date } from '../Date';
 
 type Props = {
   title: string;
@@ -19,11 +18,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
         {title}
       </h1>
       <div className="wrap gap-4">
-        <span className="select-none hstack gap-2 text-md font-bold text-accent-1">
-          <RiTimeFill />
-          <DateFormatter dateString={date} />
-        </span>
-
+        <Date date={date} />
         <div className="wrap gap-2">
           <span className="select-none text-primary-1">
             <AiTwotoneTags />
