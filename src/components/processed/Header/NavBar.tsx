@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/components/material/Link';
 import { links } from '@/config/links';
 
 export const NavBar = () => {

@@ -1,5 +1,4 @@
-import { LeftArrow, RightArrow } from './Arrow';
-import { Cell } from './Cell';
+import { Cell } from './Cell/Cell';
 import { getCells } from './utils/getCells';
 
 type Props = {
@@ -16,11 +15,9 @@ export const Pagination: React.VFC<Props> = (props) => {
   return (
     <div className="overflow-x-auto w-full center">
       <div className="flex gap-1 px-4">
-        <LeftArrow isEnd={page === 1} page={page} />
         {cells.map((cell, idx) => (
-          <Cell key={idx} cell={cell} page={page} />
+          <Cell key={idx} cell={cell} page={page} count={count} />
         ))}
-        <RightArrow isEnd={page === count} page={page} />
       </div>
     </div>
   );

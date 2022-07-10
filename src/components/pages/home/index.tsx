@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/components/material/Link';
 import { Contents } from '@/components/processed/Contents';
 import { MoreButton } from '@/components/processed/MoreButton';
 import { Profile } from '@/components/processed/Profile';

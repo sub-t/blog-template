@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/components/material/Link';
 import { FiSun } from 'react-icons/fi';
 import { Container } from '@/components/processed/Container';
 import { useDarkMode } from '@/hooks/useDarkMode';

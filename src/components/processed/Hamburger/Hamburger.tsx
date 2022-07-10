@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/components/material/Link';
 import { RiMenu4Line } from 'react-icons/ri';
 import {
   DropdownMenu,

@@ -1,3 +1,5 @@
+import { CellType } from '../types/cell';
+
 type Config = {
   count: number;
   page: number;
@@ -12,7 +14,7 @@ const defaultConfig: Required<Config> = {
   boundaryCount: 1,
 };
 
-export const getCells = (config: Config) => {
+export const getCells = (config: Config): CellType[] => {
   const { count, page, siblingCount, boundaryCount } = {
     ...defaultConfig,
     ...config,
@@ -24,31 +26,33 @@ export const getCells = (config: Config) => {
   const collisionRight = count - sideCount <= page;
   const collisionBoth = collisionLeft && collisionRight;
 
+  let cells;
   if (collisionBoth) {
-    return range(1, count + 1);
-  }
-  if (collisionLeft) {
-    return [
+    cells = range(1, count + 1);
+  } else if (collisionLeft) {
+    cells = [
       ...range(1, sideCount + 1 + siblingCount + 1),
       '...',
       ...range(count + 1 - boundaryCount, count + 1),
     ];
-  }
-  if (collisionRight) {
-    return [
+  } else if (collisionRight) {
+    cells = [
       ...range(1, boundaryCount + 1),
       '...',
       ...range(count + 1 - (siblingCount + 1 + sideCount), count + 1),
     ];
+  } else {
+    cells = [
+      ...range(1, 1 + boundaryCount),
+      '...',
+      ...range(page - siblingCount, page + siblingCount + 1),
+      '...',
+      ...range(count + 1 - boundaryCount, count + 1),
+    ];
   }
-  return [
-    ...range(1, 1 + boundaryCount),
-    '...',
-    ...range(page - siblingCount, page + siblingCount + 1),
-    '...',
-    ...range(count + 1 - boundaryCount, count + 1),
-  ];
+
+  return ['<', ...(cells as CellType[]), '>'];
 };
 
 const range = (begin: number, end: number) =>
-  Array.from({ length: end - begin }).map((_, idx) => (begin + idx).toString());
+  Array.from({ length: end - begin }).map((_, idx) => begin + idx);

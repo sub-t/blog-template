@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/components/material/Link';
 import { AiTwotoneTags } from 'react-icons/ai';
 import { Contents } from '@/components/processed/Contents';
 import { Profile } from '@/components/processed/Profile';
