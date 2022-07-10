@@ -1,4 +1,3 @@
-import { Link } from '@/components/material/Link';
 import { RiMenu4Line } from 'react-icons/ri';
 import {
   DropdownMenu,
@@ -6,6 +5,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from '@/components/material/DropdownMenu';
+import { Link } from '@/components/material/Link';
 import { links } from '../../../config/links';
 
 type Props = {
