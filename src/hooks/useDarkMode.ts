@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
 
-type UseDarkMode = (isDark?: boolean) => {
+type UseDarkMode = () => {
   isDarkMode: boolean;
   toggle: (isDark?: boolean) => void;
 };
 
-export const useDarkMode: UseDarkMode = (isInitialDark = false) => {
-  const [isDarkMode, toggleTheme] = useState(isInitialDark);
+export const useDarkMode: UseDarkMode = () => {
+  const [isDarkMode, toggleTheme] = useState(false);
   const toggle = useCallback(() => toggleTheme((state) => !state), []);
 
   useEffect(() => {

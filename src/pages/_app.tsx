@@ -8,11 +8,11 @@ import { Header } from '@/components/processed/Header';
 import { useRoutePath } from '@/hooks/useRoutePath';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const path = useRoutePath();
+  const routePath = useRoutePath();
 
   return (
     <div className="min-h-screen vstack gap-10 bg-global">
-      <DefaultSeo {...defaultSeo(path)} />
+      <DefaultSeo {...defaultSeo(routePath)} />
 
       <Header />
       <Container className="px-0 py-6 sm:p-6">
