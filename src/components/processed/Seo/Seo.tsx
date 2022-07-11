@@ -1,7 +1,7 @@
 import { DefaultSeo } from 'next-seo';
 
 export const Seo = () => {
-  const rootPath = process.env.NEXT_PUBLIC_ROOT_URL as string;
+  const rootPath = process.env.NEXT_PUBLIC_ROOT_URL;
   const imageURL = rootPath + '/assets/author.png';
 
   return (
