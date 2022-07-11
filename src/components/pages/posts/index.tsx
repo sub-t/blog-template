@@ -12,7 +12,7 @@ type Props = {
 
 export const Posts: React.VFC<Props> = ({ post }) => {
   const lg = useBreakPoint('lg');
-  const rootPath = process.env.NEXT_PUBLIC_ROOT_URL;
+  const rootPath = process.env.NEXT_PUBLIC_ROOT_URL as string;
 
   return (
     <Contents
