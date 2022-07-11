@@ -25,7 +25,7 @@ export const Cell: React.VFC<Props> = ({ cell, page, count }) => {
       return (
         <ConditionalLink
           condition={page < count}
-          href={`posts/page/${page + 1}`}
+          href={`/posts/page/${page + 1}`}
         >
           <button type="button" aria-label="次に進む" disabled={page === count}>
             <StyledCell variant="arrow" disabled={page === count}>
