@@ -1,8 +1,7 @@
 import { DefaultSeo } from 'next-seo';
-import { useRootPath } from '@/hooks/useRootPath';
 
 export const Seo = () => {
-  const rootPath = useRootPath();
+  const rootPath = process.env.NEXT_PUBLIC_ROOT_URL;
   const imageURL = rootPath + '/assets/author.png';
 
   return (
@@ -15,12 +14,12 @@ export const Seo = () => {
           title: 'blog',
           description: 'blog',
           site_name: 'blog',
-          url: process.env.NEXT_PUBLIC_ROOT_URL,
+          url: rootPath,
           images: [
             {
               url: imageURL,
-              width: 800,
-              height: 600,
+              width: 512,
+              height: 512,
               alt: 'Og Image Alt',
               type: 'image/png',
             },
@@ -32,7 +31,10 @@ export const Seo = () => {
           cardType: 'summary_large_image',
         }}
         additionalLinkTags={[
-          { rel: 'icon', href: `${rootPath}/favicon.ico` },
+          {
+            rel: 'icon',
+            href: `${rootPath}/favicon.ico`,
+          },
           {
             rel: 'apple-touch-icon',
             sizes: '180x180',
