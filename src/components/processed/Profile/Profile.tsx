@@ -1,4 +1,3 @@
-import { Slot } from '@radix-ui/react-slot';
 import { Image } from '@/components/material/Image';
 import { sns } from '../../../config/sns';
 
@@ -20,9 +19,9 @@ export const Profile = () => (
 
     <div className="flex gap-4">
       {sns.map(({ icon }, idx) => (
-        <Slot key={idx} {...{ size: 20 }} className="text-primary-1">
+        <div key={idx} className="text-primary-1">
           {icon}
-        </Slot>
+        </div>
       ))}
     </div>
   </div>
