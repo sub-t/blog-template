@@ -1,10 +1,10 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import { Contents } from '@/components/processed/Contents';
 import { Post } from '@/components/processed/Post';
 import { Profile } from '@/components/processed/Profile';
 import { Toc } from '@/components/processed/Toc';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
-import { useRoutePath } from '@/hooks/useRoutePath';
+import { useRootPath } from '@/hooks/useRootPath';
 import { PostType } from '@/types/post';
 
 type Props = {
@@ -13,16 +13,26 @@ type Props = {
 
 export const Posts: React.VFC<Props> = ({ post }) => {
   const lg = useBreakPoint('lg');
-  const routePath = useRoutePath();
+  const rootPath = useRootPath();
 
   return (
     <Contents
       main={
         <article>
-          <Head>
-            <title>{post.title}</title>
-            <meta property="og:image" content={routePath + post.ogImage.url} />
-          </Head>
+          <NextSeo
+            title={post.title}
+            description={post.excerpt}
+            openGraph={{
+              url: process.env.NEXT_PUBLIC_ROOT_URL,
+              title: post.title,
+              description: post.excerpt,
+              images: [
+                {
+                  url: rootPath + post.ogImage.url,
+                },
+              ],
+            }}
+          />
           <Post post={post} />
         </article>
       }
