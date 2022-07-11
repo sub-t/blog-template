@@ -1,5 +1,5 @@
 import { Image } from '@/components/material/Image';
-import { sns } from '@/config/sns';
+import { sns } from '../../../config/sns';
 
 export const Profile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-1">

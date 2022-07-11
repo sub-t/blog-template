@@ -4,6 +4,7 @@ import { Post } from '@/components/processed/Post';
 import { Profile } from '@/components/processed/Profile';
 import { Toc } from '@/components/processed/Toc';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
+import { useRootPath } from '@/hooks/useRootPath';
 import { PostType } from '@/types/post';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 
 export const Posts: React.VFC<Props> = ({ post }) => {
   const lg = useBreakPoint('lg');
-  const rootPath = process.env.NEXT_PUBLIC_ROOT_URL;
+  const rootPath = useRootPath();
 
   return (
     <Contents
@@ -22,7 +23,7 @@ export const Posts: React.VFC<Props> = ({ post }) => {
             title={post.title}
             description={post.excerpt}
             openGraph={{
-              url: rootPath,
+              url: process.env.NEXT_PUBLIC_ROOT_URL,
               title: post.title,
               description: post.excerpt,
               images: [

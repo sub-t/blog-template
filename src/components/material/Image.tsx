@@ -5,7 +5,7 @@ export const Image = React.forwardRef<
   React.ElementRef<'img'>,
   React.ComponentPropsWithoutRef<'img'>
 >(({ children, src, alt, ...props }, forwardedRef) => {
-  const rootPath = process.env.NEXT_PUBLIC_ROOT_URL;
+  const rootPath = useRootPath();
   const imgPath = rootPath + src;
 
   return (
