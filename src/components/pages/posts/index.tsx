@@ -26,6 +26,7 @@ export const Posts: React.VFC<Props> = ({ post }) => {
               url: process.env.NEXT_PUBLIC_ROOT_URL,
               title: post.title,
               description: post.excerpt,
+              // 無効
               images: [
                 {
                   url: rootPath + post.ogImage.url,

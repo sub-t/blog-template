@@ -9,7 +9,7 @@ export const Profile = () => (
         alt="subt avatar"
         src="/assets/author.png"
       />
-      <h1 className="text-2xl font-semibold text-primary-1">subt</h1>
+      <h1 className="text-2xl font-semibold text-primary-1">Next.js</h1>
     </div>
 
     <p className="text-primary-1">
