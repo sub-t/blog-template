@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo';
-import { Contents } from '@/components/processed/Contents';
-import { Post } from '@/components/processed/Post';
-import { Profile } from '@/components/processed/Profile';
-import { Toc } from '@/components/processed/Toc';
+import { Contents } from '@/components/features/app/Contents';
+import { Profile } from '@/components/features/app/Profile';
+import { Post } from '@/components/features/post/Post';
+import { Toc } from '@/components/features/post/Toc';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
 import { useRootPath } from '@/hooks/useRootPath';
 import { PostType } from '@/types/post';

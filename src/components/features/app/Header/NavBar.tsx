@@ -1,4 +1,4 @@
-import { Link } from '@/components/material/Link';
+import { Link } from '@/components/common/Link';
 import { links } from '@/config/links';
 
 export const NavBar = () => {

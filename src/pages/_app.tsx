@@ -1,9 +1,9 @@
 import { AppProps } from 'next/app';
 import '@/styles/index.css';
-import { Container } from '@/components/processed/Container';
-import { Footer } from '@/components/processed/Footer';
-import { Header } from '@/components/processed/Header';
-import { Seo } from '@/components/processed/Seo';
+import { Container } from '@/components/features/app/Container';
+import { Footer } from '@/components/features/app/Footer';
+import { Header } from '@/components/features/app/Header';
+import { Seo } from '@/components/features/app/Seo';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

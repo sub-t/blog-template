@@ -1,7 +1,7 @@
 import { AiTwotoneTags } from 'react-icons/ai';
-import { Image } from '@/components/material/Image';
-import { Link } from '@/components/material/Link';
-import { Date } from '../Date';
+import { Image } from '@/components/common/Image';
+import { Link } from '@/components/common/Link';
+import { Date } from '../../../common/Date';
 
 type Props = {
   title: string;

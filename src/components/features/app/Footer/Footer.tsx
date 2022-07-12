@@ -1,4 +1,4 @@
-import { Container } from '@/components/processed/Container';
+import { Container } from '@/components/features/app/Container';
 
 export const Footer = () => {
   return (

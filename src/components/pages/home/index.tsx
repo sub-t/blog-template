@@ -1,8 +1,8 @@
-import { Link } from '@/components/material/Link';
-import { Contents } from '@/components/processed/Contents';
-import { MoreButton } from '@/components/processed/MoreButton';
-import { Profile } from '@/components/processed/Profile';
-import { Stories } from '@/components/processed/Stories';
+import { Link } from '@/components/common/Link';
+import { Contents } from '@/components/features/app/Contents';
+import { Profile } from '@/components/features/app/Profile';
+import { MoreButton } from '@/components/features/navigation/MoreButton';
+import { Stories } from '@/components/features/post/Stories';
 import { PostType } from '@/types/post';
 
 type Props = {
