@@ -4,7 +4,7 @@ import { useBreakPoint } from '@/hooks/useBreakPoint';
 
 type Props = {
   main: React.ReactElement;
-  aside: React.ReactNode;
+  aside?: React.ReactNode;
   hamburgerMenu?: React.ReactNode;
 };
 
