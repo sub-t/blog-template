@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
 } from '@/components/common/DropdownMenu';
 import { Link } from '@/components/common/Link';
-import { links } from '../../../../config/links';
+import { links } from '@/config/links';
 
 type Props = {
   children?: React.ReactNode;
