@@ -5,7 +5,7 @@ export const Profile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-1">
     <div className="vstack items-center gap-2">
       <Image
-        className="object-cover w-28 h-28 rounded-full bg-white"
+        className="object-cover w-28 h-28 rounded-full"
         alt="subt avatar"
         src="/assets/author.png"
       />
