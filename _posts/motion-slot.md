@@ -6,9 +6,9 @@ date: '2022-07-01'
 ogImage:
   url: '/assets/blog/dynamic-routing/cover.jpg'
 tags:
-  - 'React.js'
-  - 'Radix UI'
-  - 'Framer Motion'
+  - 'React'
+  - 'RadixUI'
+  - 'FramerMotion'
 ---
 
 https://stitches.dev/

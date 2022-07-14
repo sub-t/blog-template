@@ -1,4 +1,5 @@
 import { DefaultSeo } from 'next-seo';
+import { ROOT_URL } from '@/config/app';
 import { useRootPath } from '@/hooks/useRootPath';
 
 export const Seo = () => {
@@ -15,7 +16,7 @@ export const Seo = () => {
           title: 'blog',
           description: 'blog',
           site_name: 'blog',
-          url: process.env.NEXT_PUBLIC_ROOT_URL,
+          url: ROOT_URL,
           images: [
             {
               url: imageURL,

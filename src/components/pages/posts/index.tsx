@@ -2,7 +2,9 @@ import { NextSeo } from 'next-seo';
 import { Contents } from '@/components/features/app/Contents';
 import { Profile } from '@/components/features/app/Profile';
 import { Post } from '@/components/features/post/Post';
+import { Share } from '@/components/features/post/Share';
 import { Toc } from '@/components/features/post/Toc';
+import { ROOT_URL } from '@/config/app';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
 import { useRootPath } from '@/hooks/useRootPath';
 import { PostType } from '@/types/post';
@@ -21,10 +23,9 @@ export const Posts: React.VFC<Props> = ({ post }) => {
         title={post.title}
         description={post.excerpt}
         openGraph={{
-          url: process.env.NEXT_PUBLIC_ROOT_URL,
+          url: ROOT_URL,
           title: post.title,
           description: post.excerpt,
-          // 無効
           images: [
             {
               url: rootPath + post.ogImage.url,
@@ -39,13 +40,12 @@ export const Posts: React.VFC<Props> = ({ post }) => {
           </article>
         }
         aside={
-          <div className="vstack gap-6 h-full">
+          <div className="vstack gap-10 h-full">
             <Profile />
-            {lg && (
-              <div className="sticky top-20">
-                <Toc />
-              </div>
-            )}
+            <div className="vstack gap-10 sticky top-20">
+              {lg && <Toc />}
+              <Share post={post} />
+            </div>
           </div>
         }
         hamburgerMenu={
