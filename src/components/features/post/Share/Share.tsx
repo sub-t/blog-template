@@ -3,10 +3,10 @@ import {
   FacebookShareButton,
   PinterestIcon,
   PinterestShareButton,
-  RedditIcon,
-  RedditShareButton,
-  TumblrIcon,
-  TumblrShareButton,
+  LineIcon,
+  LineShareButton,
+  HatenaIcon,
+  HatenaShareButton,
   TwitterIcon,
   TwitterShareButton,
 } from 'react-share';
@@ -51,12 +51,12 @@ export const Share: React.VFC<Props> = ({ post }) => {
         <FacebookShareButton {...config}>
           <FacebookIcon size={SIZE} round />
         </FacebookShareButton>
-        <RedditShareButton {...config}>
-          <RedditIcon size={SIZE} round />
-        </RedditShareButton>
-        <TumblrShareButton {...config}>
-          <TumblrIcon size={SIZE} round />
-        </TumblrShareButton>
+        <LineShareButton {...config}>
+          <LineIcon size={SIZE} round />
+        </LineShareButton>
+        <HatenaShareButton {...config}>
+          <HatenaIcon size={SIZE} round />
+        </HatenaShareButton>
       </div>
     </div>
   );
