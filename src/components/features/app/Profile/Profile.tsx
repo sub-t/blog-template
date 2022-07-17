@@ -1,10 +1,11 @@
+import { Image } from '@/components/common/Image';
 import { Link } from '@/components/common/Link';
 import { sns } from '@/config/sns';
 
 export const Profile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-1">
     <div className="vstack items-center gap-2">
-      <img
+      <Image
         className="object-cover w-28 h-28 rounded-full bg-white"
         alt="avatar"
         src="/assets/author.png"
@@ -13,8 +14,8 @@ export const Profile = () => (
     </div>
 
     <p className="text-primary-1">
-      Modern JavaScript Framework. hybrid static & server rendering, TypeScript support, smart bundling,
-      route pre-fetching...
+      Modern JavaScript Framework. hybrid static & server rendering, TypeScript
+      support, smart bundling, route pre-fetching...
     </p>
 
     <div className="flex gap-4">
