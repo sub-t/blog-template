@@ -6,23 +6,21 @@ export const Profile = () => (
     <div className="vstack items-center gap-2">
       <img
         className="object-cover w-28 h-28 rounded-full bg-white"
-        alt="subt avatar"
+        alt="avatar"
         src="/assets/author.png"
       />
-      <h1 className="text-2xl font-semibold text-primary-1">subt</h1>
+      <h1 className="text-2xl font-semibold text-primary-1">Next.js</h1>
     </div>
 
     <p className="text-primary-1">
-      Full Stack maker & UI / UX Designer , love hip hop music Author of
-      Building UI.
+      Modern JavaScript Framework. hybrid static & server rendering, TypeScript support, smart bundling,
+      route pre-fetching...
     </p>
 
     <div className="flex gap-4">
       {sns.map(({ href, icon }) => (
         <Link key={href} href={href} passHref>
-          <a className="text-primary-1">
-            {icon}
-          </a>
+          <a className="text-primary-1">{icon}</a>
         </Link>
       ))}
     </div>

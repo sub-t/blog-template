@@ -6,7 +6,7 @@ import { Share } from '@/components/features/post/Share';
 import { Toc } from '@/components/features/post/Toc';
 import { ROOT_URL } from '@/config/app';
 import { useBreakPoint } from '@/hooks/useBreakPoint';
-import { useRootPath } from '@/hooks/useRootPath';
+import { joinPath } from '@/lib/joinPath';
 import { PostType } from '@/types/post';
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 
 export const Posts: React.VFC<Props> = ({ post }) => {
   const lg = useBreakPoint('lg');
-  const rootPath = useRootPath();
+  const imageURL = joinPath(ROOT_URL, post.ogImage.url);
 
   return (
     <>
@@ -28,7 +28,7 @@ export const Posts: React.VFC<Props> = ({ post }) => {
           description: post.excerpt,
           images: [
             {
-              url: rootPath + post.ogImage.url,
+              url: imageURL,
             },
           ],
         }}
