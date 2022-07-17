@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Seo />
 
-      <div className="min-h-screen vstack gap-10 bg-global">
+      <div style={{ gridTemplateRows: 'auto 1fr auto/100%' }} className="grid gap-10 min-h-screen bg-global">
         <Header />
         <Container className="px-0 py-6 sm:p-6">
           <Component {...pageProps} />
