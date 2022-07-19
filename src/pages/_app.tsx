@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Seo />
 
       <div
-        style={{ gridTemplateRows: 'auto 1fr auto/100%' }}
+        style={{ gridTemplateRows: 'auto 1fr auto' }}
         className="grid gap-10 min-h-screen bg-global"
       >
         <Header />
