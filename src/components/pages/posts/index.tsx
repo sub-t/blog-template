@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import { Contents } from '@/components/features/app/Contents';
+import { MainLayout } from '@/components/features/app/Layout';
 import { Profile } from '@/components/features/app/Profile';
 import { Post } from '@/components/features/post/Post';
 import { Share } from '@/components/features/post/Share';
@@ -33,7 +33,7 @@ export const Posts: React.VFC<Props> = ({ post }) => {
           ],
         }}
       />
-      <Contents
+      <MainLayout
         main={
           <article>
             <Post post={post} />

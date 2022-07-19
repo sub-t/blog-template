@@ -87,7 +87,7 @@ import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { motion } from 'framer-motion';
 
-const Container = motion(Slot);
+const ContentLayout = motion(Slot);
 
 type Custom = {
   y?: number;
@@ -103,7 +103,7 @@ const defaultCustom: Custom = {
   duration: 0.6,
 };
 
-const config = (custom?: Custom): React.ComponentProps<typeof Container> => {
+const config = (custom?: Custom): React.ComponentProps<typeof ContentLayout> => {
   const { y, once, amount, duration } = { ...defaultCustom, ...custom };
 
   return {
@@ -131,12 +131,12 @@ type Props = {
 };
 
 export const Enter = React.forwardRef<
-  React.ElementRef<typeof Container>,
+  React.ElementRef<typeof ContentLayout>,
   Props
 >(({ children, custom }, forwardedRef) => (
-  <Container {...config(custom)} ref={forwardedRef}>
+  <ContentLayout {...config(custom)} ref={forwardedRef}>
     {children}
-  </Container>
+  </ContentLayout>
 ));
 
 Enter.displayName = 'Enter';

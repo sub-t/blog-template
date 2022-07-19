@@ -10,7 +10,7 @@ type Props = {
   className?: string;
 };
 
-export const Contents: React.VFC<Props> = ({
+export const MainLayout: React.VFC<Props> = ({
   main,
   aside,
   hamburgerMenu,

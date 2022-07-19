@@ -1,6 +1,6 @@
 import { AiTwotoneTags } from 'react-icons/ai';
 import { Link } from '@/components/common/Link';
-import { Contents } from '@/components/features/app/Contents';
+import { MainLayout } from '@/components/features/app/Layout';
 import { Profile } from '@/components/features/app/Profile';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 
 export const Tags: React.VFC<Props> = ({ tags }) => {
   return (
-    <Contents
+    <MainLayout
       main={
         <div className="vstack gap-10 p-8 bg-primary-1">
           <div className="center">
