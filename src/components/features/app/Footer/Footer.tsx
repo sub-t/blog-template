@@ -9,9 +9,12 @@ export const Footer = () => {
       <ContentLayout className="p-10 center bg-neutral-800">
         <div className="vstack items-center gap-4">
           <div className="flex gap-4">
-            {sns.map(({ href, icon }) => (
+            {sns.map(({ href, icon, label }) => (
               <Link key={href} href={href} passHref>
-                <a className="text-neutral-200 hover:text-neutral-500 active:text-gray-600 transition duration-100">
+                <a
+                  className="text-neutral-200 hover:text-neutral-500 active:text-gray-600 transition duration-100"
+                  aria-label={label}
+                >
                   {icon}
                 </a>
               </Link>
