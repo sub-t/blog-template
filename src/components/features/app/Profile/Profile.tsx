@@ -6,7 +6,7 @@ export const Profile = () => (
   <div className="select-none vstack items-center gap-5 p-6 bg-primary-1">
     <div className="vstack items-center gap-2">
       <Image
-        className="object-cover w-28 h-28 rounded-full bg-white"
+        className="object-cover w-28 h-28 rounded-full"
         alt="avatar"
         src="/assets/author.png"
       />
@@ -14,7 +14,7 @@ export const Profile = () => (
     </div>
 
     <p className="text-primary-1">
-      Modern JavaScript Framework. hybrid static & server rendering, TypeScript
+      Modern JavaScript Framework: hybrid static & server rendering, TypeScript
       support, smart bundling, route pre-fetching...
     </p>
 
