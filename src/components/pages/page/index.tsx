@@ -2,8 +2,8 @@ import { useRouter } from 'next/router';
 import { RiChatNewLine } from 'react-icons/ri';
 import { MainLayout } from '@/components/features/app/Layout';
 import { Profile } from '@/components/features/app/Profile';
-import { Pagination } from '@/components/features/navigation/Pagination';
-import { Stories } from '@/components/features/post/Stories';
+import { Pagination } from '@/components/features/story/Pagination';
+import { Stories } from '@/components/features/story/Stories';
 import { PostType } from '@/types/post';
 
 type Props = {
