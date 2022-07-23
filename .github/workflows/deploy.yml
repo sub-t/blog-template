@@ -32,9 +32,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Move 404 to root
-        run: mv ./out/404/index.html ./out/404.html
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
