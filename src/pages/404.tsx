@@ -14,7 +14,7 @@ const View = () => (
     </p>
 
     <Link href="/" passHref>
-      <a className="py-2 px-6 btn">Go home</a>
+      <a className="px-10 button">Go home</a>
     </Link>
   </div>
 );

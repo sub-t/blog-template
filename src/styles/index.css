@@ -25,6 +25,9 @@
   .text-accent-1 {
     @apply text-teal-800 dark:text-teal-400;
   }
+  .button {
+    @apply center gap-2 py-3 px-4 rounded-lg text-base font-normal bg-teal-700 text-white;
+  }
   .icon-btn {
     @apply text-primary-1 p-3;
   }
