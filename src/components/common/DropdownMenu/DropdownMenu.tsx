@@ -1,59 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { Slot } from '@radix-ui/react-slot';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useStore } from './store';
+import { AnimatePresence } from 'framer-motion';
+import { AnimationConfig, Motion } from '../Motion';
 
-const MotionSlot = motion(Slot);
-
-const animationConfig: React.ComponentProps<typeof MotionSlot> = {
+const animationConfig: AnimationConfig = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
   transition: { duration: 0.2 },
 };
 
-type DropdownMenuProps = React.ComponentPropsWithoutRef<
-  typeof DropdownMenuPrimitive.Root
->;
-
-export const DropdownMenu: React.VFC<DropdownMenuProps> = ({
-  children,
-  ...props
-}) => {
-  const setOpen = useStore((state) => state.setOpen);
-  return (
-    <DropdownMenuPrimitive.Root
-      {...props}
-      onOpenChange={(open) => setOpen(open)}
-    >
-      {children}
-    </DropdownMenuPrimitive.Root>
-  );
+type Props = React.ComponentPropsWithoutRef<
+  typeof DropdownMenuPrimitive.Content
+> & {
+  trigger?: React.ReactNode;
 };
 
-export const DropdownMenuContent = React.forwardRef<
+export const DropdownMenu = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
->(({ children, ...props }, forwardedRef) => {
-  const { open } = useStore((state) => state);
+  Props
+>(({ children, trigger, ...props }, forwardedRef) => {
+  const [open, setOpen] = useState(false);
 
   return (
-    <AnimatePresence>
-      {open && (
-        <MotionSlot {...animationConfig}>
-          <Slot {...props}>
-            <DropdownMenuPrimitive.Content ref={forwardedRef} forceMount>
-              {children}
-            </DropdownMenuPrimitive.Content>
-          </Slot>
-        </MotionSlot>
-      )}
-    </AnimatePresence>
+    <DropdownMenuPrimitive.Root onOpenChange={(open) => setOpen(open)}>
+      <DropdownMenuPrimitive.Trigger asChild>
+        {trigger}
+      </DropdownMenuPrimitive.Trigger>
+
+      <AnimatePresence>
+        {open && (
+          <Motion {...animationConfig}>
+            <Slot {...props}>
+              <DropdownMenuPrimitive.Content
+                collisionPadding={16}
+                ref={forwardedRef}
+                forceMount
+              >
+                {children}
+              </DropdownMenuPrimitive.Content>
+            </Slot>
+          </Motion>
+        )}
+      </AnimatePresence>
+    </DropdownMenuPrimitive.Root>
   );
 });
 
-DropdownMenuContent.displayName = 'DropdownMenuContent';
+DropdownMenu.displayName = 'DropdownMenu';
 
-export const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
+export const DropdownMenuGroup = DropdownMenuPrimitive.Group;
 export const DropdownMenuItem = DropdownMenuPrimitive.Item;
