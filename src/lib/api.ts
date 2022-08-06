@@ -1,10 +1,10 @@
 import fs from 'fs';
-import { join } from 'path';
+import { resolve } from 'path';
 import matter from 'gray-matter';
 import { paginationOffset } from '@/config/pagination';
 import { PostType } from '@/types/post';
 
-const postsDirectory = join(process.cwd(), '_posts').replaceAll('\\', '/');
+const postsDirectory = resolve(process.cwd(), '_posts');
 
 export const getPostSlugs = () => fs.readdirSync(postsDirectory);
 
