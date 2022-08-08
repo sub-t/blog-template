@@ -24,10 +24,10 @@ https://sub-t.github.io/blog-template/
 ## Development
 
 ```bash
-$ git clone https://github.com/sub-t/blog-template project-name
-$ cd project-name
-$ yarn
-$ yarn dev
+git clone https://github.com/sub-t/blog-template project-name
+cd project-name
+yarn
+yarn dev
 ```
 
 ## Deployment
