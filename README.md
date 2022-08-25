@@ -6,9 +6,19 @@
 
 - next.config.js
 - .env
-- public/assets/author.png
-- public/favicon.ico
-- public/favicons
+- public
+  - assets/author.png
+  - favicons
+  - favicon.ico
+- src
+  - components
+    - features
+      - app
+        - Header/Header.tsx
+        - Profile/Profile.tsx
+        - Seo/Seo.tsx
+      - post/Share/Share.tsx
+  - config/sns.tsx
 
 # fork 元
 

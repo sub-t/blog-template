@@ -4,6 +4,7 @@ import { Link } from '@/components/common/Link';
 import { ContentLayout } from '@/components/features/app/Layout';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { NavBar } from './NavBar';
+import { SITE_NAME } from '@/config/app';
 
 export const Header = () => {
   const { toggle } = useDarkMode();
@@ -12,8 +13,8 @@ export const Header = () => {
     <ContentLayout className="sticky top-0 z-10 py-3 bg-primary-1 shadow-sm">
       <nav className="hstack justify-between">
         <Link href="/" passHref>
-          <a className="select-none text-primary-1 text-2xl md:text-3xl font-bold">
-            Blog
+          <a className="select-none text-primary-1 text-2xl md:text-3xl font-light">
+            {SITE_NAME}
           </a>
         </Link>
 

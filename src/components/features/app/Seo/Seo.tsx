@@ -2,6 +2,7 @@ import { DefaultSeo } from 'next-seo';
 import { ROOT_URL } from '@/config/app';
 import { useRootPath } from '@/hooks/useRootPath';
 import { joinPath } from '@/lib/joinPath';
+import { SITE_NAME } from '@/config/app';
 
 export const Seo = () => {
   const rootPath = useRootPath();
@@ -10,13 +11,13 @@ export const Seo = () => {
   return (
     <>
       <DefaultSeo
-        defaultTitle="blog"
+        defaultTitle={SITE_NAME}
         description="blog"
         openGraph={{
           type: 'website',
-          title: 'blog',
+          title: SITE_NAME,
           description: 'blog',
-          site_name: 'blog',
+          site_name: SITE_NAME,
           url: ROOT_URL,
           images: [
             {

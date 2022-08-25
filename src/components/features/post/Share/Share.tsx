@@ -36,9 +36,9 @@ export const Share: React.VFC<Props> = ({ post }) => {
       </div>
 
       <div className="w-full center gap-4">
-        <PinterestShareButton {...config} media={ogImage.url}>
-          <PinterestIcon size={SIZE} round />
-        </PinterestShareButton>
+        <HatenaShareButton {...config}>
+          <HatenaIcon size={SIZE} round />
+        </HatenaShareButton>
         <TwitterShareButton
           title={title}
           url={url}
@@ -51,12 +51,6 @@ export const Share: React.VFC<Props> = ({ post }) => {
         <FacebookShareButton {...config}>
           <FacebookIcon size={SIZE} round />
         </FacebookShareButton>
-        <LineShareButton {...config}>
-          <LineIcon size={SIZE} round />
-        </LineShareButton>
-        <HatenaShareButton {...config}>
-          <HatenaIcon size={SIZE} round />
-        </HatenaShareButton>
       </div>
     </div>
   );

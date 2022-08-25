@@ -2,17 +2,12 @@ import { SiGithub, SiTwitter, SiZenn } from 'react-icons/si';
 
 export const sns = [
   {
-    href: 'https://zenn.dev',
-    icon: <SiZenn size={20} />,
-    label: 'Zenn',
-  },
-  {
-    href: 'https://github.com',
+    href: 'https://github.com/mida-hub',
     icon: <SiGithub size={20} />,
     label: 'Github',
   },
   {
-    href: 'https://twitter.com',
+    href: 'https://twitter.com/mida12251141',
     icon: <SiTwitter size={20} />,
     label: 'Twitter',
   },
