@@ -1,8 +1,7 @@
 import { DefaultSeo } from 'next-seo';
-import { ROOT_URL } from '@/config/app';
+import { ROOT_URL, SITE_NAME } from '@/config/app';
 import { useRootPath } from '@/hooks/useRootPath';
 import { joinPath } from '@/lib/joinPath';
-import { SITE_NAME } from '@/config/app';
 
 export const Seo = () => {
   const rootPath = useRootPath();

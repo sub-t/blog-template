@@ -1,10 +1,6 @@
 import {
   FacebookIcon,
   FacebookShareButton,
-  PinterestIcon,
-  PinterestShareButton,
-  LineIcon,
-  LineShareButton,
   HatenaIcon,
   HatenaShareButton,
   TwitterIcon,
