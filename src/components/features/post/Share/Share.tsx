@@ -7,7 +7,7 @@ import {
   TwitterShareButton,
 } from 'react-share';
 import { MdShare } from 'react-icons/md';
-import { ROOT_URL, SITE_NAME } from '@/config/app';
+import { ROOT_URL, SITE_NAME, TWITTER_ACCOUNT } from '@/config/app';
 import { PostType } from '@/types/post';
 
 type Props = {
@@ -24,6 +24,8 @@ export const Share: React.VFC<Props> = ({ post }) => {
 
   const tags = post.tags.map((tag) => tag.split(' ')[0]);
 
+  const twitter_account = process.env.TWITTER_ACCOUNT as string;
+
   return (
     <div className="select-none vstack gap-3 p-6 bg-primary-1">
       <div className="center gap-2 py-2 px-3 text-lg font-bold text-primary-1 uppercase">
@@ -38,7 +40,7 @@ export const Share: React.VFC<Props> = ({ post }) => {
         <TwitterShareButton
           title={title}
           url={url}
-          via={SITE_NAME}
+          via={TWITTER_ACCOUNT}
           related={[SITE_NAME, 'Next.js']}
           hashtags={tags}
         >

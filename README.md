@@ -20,6 +20,13 @@
       - post/Share/Share.tsx
   - config/sns.tsx
 
+# ローカル作業
+
+```
+npm run dev
+npm run build
+```
+
 # fork 元
 
 - https://github.com/sub-t/blog-template/tree/main
