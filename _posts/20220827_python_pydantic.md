@@ -1,10 +1,10 @@
 ---
 title: 'pydantic のススメ'
 excerpt: 'Python で環境変数を読むときに、「pydantic」を使うと便利です。「python-dotenv」と比較した上で「pydantic」の便利な点について紹介します。'
-coverImage: '/assets/blog/2022/08/python_pydantic/python-logo.png'
+coverImage: '/assets/blog/20220827_python_pydantic/python-logo.png'
 date: '2022-08-27'
 ogImage:
-  url: '/assets/blog/2022/08/python_pydantic/python-logo.png'
+  url: '/assets/blog/20220827_python_pydantic/python-logo.png'
 tags:
   - 'python'
 ---

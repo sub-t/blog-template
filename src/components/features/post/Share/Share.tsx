@@ -17,14 +17,12 @@ type Props = {
 const SIZE = 40;
 
 export const Share: React.VFC<Props> = ({ post }) => {
-  const { title, slug, ogImage } = post;
+  const { title, slug } = post;
 
   const url = `${ROOT_URL}/posts/${slug}`;
   const config = { title, url };
 
   const tags = post.tags.map((tag) => tag.split(' ')[0]);
-
-  const twitter_account = process.env.TWITTER_ACCOUNT as string;
 
   return (
     <div className="select-none vstack gap-3 p-6 bg-primary-1">
