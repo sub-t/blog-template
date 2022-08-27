@@ -4,6 +4,7 @@
 
 # 初期修正
 
+- .github/workflows/deploy.yml: Custom Domain の場合に CNAME の設定が必要になる
 - next.config.js
 - .env
 - public
