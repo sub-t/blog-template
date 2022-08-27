@@ -1,6 +1,6 @@
 # Blog
 
-個人ブログ
+個人ブログ: https://tomatonic.work/
 
 # 初期修正
 
