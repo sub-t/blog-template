@@ -6,7 +6,7 @@ date: '2022-11-12'
 ogImage:
   url: '/assets/blog/20221112_airflow_gkepodoperator/airflow.png'
 tags:
-  - 'python'
+  - 'airflow'
 ---
 
 ## 概要
@@ -31,11 +31,24 @@ Workload Identity では Kubernetes Service Account と Google Service Account �
 
 最初に言ってしまうと、[こちら](https://stackoverflow.com/questions/66970409/passing-serviceaccount-in-airflow-kubernetes-pod-operator) に回答が書いてあります。
 
+---
+
+> The KubernetesPodOperator contains a parameter service_account_name with which which you can specify the K8s service account. It is available for both Airflow v2 and v1.10, the latter is just not documented.
+
+> Example call (mostly taken from [https://airflow.apache.org/docs/apache-airflow-providers-cncf-kubernetes/stable/operators.html](https://airflow.apache.org/docs/apache-airflow-providers-cncf-kubernetes/stable/operators.html)):
+
 ```
-The KubernetesPodOperator contains a parameter service_account_name with
-which which you can specify the K8s service account.
-It is available for both Airflow v2 and v1.10, the latter is just not documented.
+quay_k8s = KubernetesPodOperator(
+    namespace='default',
+    image='quay.io/apache/bash',
+    service_account_name="my_k8s_svc_acct",
+    cmds=["bash", "-cx"],
+    name="airflow-private-image-pod",
+    task_id="task-two",
+)
 ```
+
+---
 
 Airflow 2 系と 1.10 以降で service_account_name を指定できるようです。
 
