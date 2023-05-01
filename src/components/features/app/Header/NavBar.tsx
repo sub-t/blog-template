@@ -6,7 +6,7 @@ export const NavBar = () => {
     <>
       {links.map(({ name, href }) => (
         <Link key={name} href={href} passHref>
-          <a className="px-5 py-2 text-primary-1 capitalize select-none cursor-pointer">
+          <a className="px-2 py-2 text-primary-1 capitalize select-none cursor-pointer">
             {name}
           </a>
         </Link>

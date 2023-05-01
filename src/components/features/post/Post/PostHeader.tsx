@@ -17,7 +17,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
         <Image
           src={coverImage}
           alt={`Cover Image for ${title}`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-lg"
         />
       </div>
       <h1 className="text-primary-1 text-3xl md:text-4xl font-bold tracking-tighter leading-tight">
@@ -31,7 +31,7 @@ export const PostHeader = ({ title, coverImage, date, tags }: Props) => {
           </span>
           {tags.map((tag) => (
             <Link key={tag} href={`/tags/${tag}`} passHref>
-              <a className="badge">{tag}</a>
+              <a className="badge rounded">{tag}</a>
             </Link>
           ))}
         </div>

@@ -15,7 +15,7 @@ export const Toc: React.VFC = () => {
   }, []);
 
   return (
-    <div className="select-none vstack gap-3 p-6 bg-primary-1">
+    <div className="select-none vstack gap-3 p-6 bg-primary-1 rounded-lg">
       <div className="center">
         <div className="center gap-2 py-2 px-3 border-b-2 border-teal-700 dark:border-teal-400 text-base font-bold text-primary-1">
           <MdOutlineContentCopy />

@@ -17,7 +17,7 @@ export const Page: React.VFC<Props> = ({ posts, maxPage }) => {
   return (
     <MainLayout
       main={
-        <div className="vstack gap-10 p-8 bg-primary-1">
+        <div className="vstack gap-10 p-8 bg-primary-1 rounded-lg">
           <Stories posts={posts} title="記事一覧" icon={<RiChatNewLine />} />
           <Pagination count={maxPage} page={page} />
         </div>

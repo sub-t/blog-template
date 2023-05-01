@@ -11,22 +11,24 @@ tags:
   - 'FramerMotion'
 ---
 
-https://stitches.dev/
+<https://stitches.dev/>
 
 ## 概要
 
-Framer MotionをReact Slotで運用すると、アニメーションの再利用性が飛躍的に向上します。
+Framer Motion を React Slot で運用すると、アニメーションの再利用性が飛躍的に向上します。
 
 ### React Slot
 
-https://www.radix-ui.com/docs/primitives/utilities/slot
+<https://www.radix-ui.com/docs/primitives/utilities/slot>
 
-`Slot`は子コンポーネントにpropsを渡す役割を持ちます。
+`Slot`は子コンポーネントに props を渡す役割を持ちます。
 
 これが
 
 ```tsx
-<Slot color="red"><AnyComponent /></Slot>
+<Slot color="red">
+  <AnyComponent />
+</Slot>
 ```
 
 実質的にこうなります。
@@ -35,18 +37,17 @@ https://www.radix-ui.com/docs/primitives/utilities/slot
 <AnyComponent color="red" />
 ```
 
-`Slot`本体は消えるものの、propsを介して任意のコンポーネントに機能を与えられるという点が重要です。余分な`div`を生成することはありません。
+`Slot`本体は消えるものの、props を介して任意のコンポーネントに機能を与えられるという点が重要です。余分な`div`を生成することはありません。
 
-詳しくは[こちら](https://zenn.dev/subt/articles/b6aa48ccb0c884
-)を参照ください。
+詳しくは[こちら](https://zenn.dev/subt/articles/b6aa48ccb0c884)を参照ください。
 
 ### Framer Motion
 
-https://www.framer.com/motion
+<https://www.framer.com/motion>
 
 [Framer](https://www.framer.com/)が提供しているアニメーションライブラリです。
 
-どんなアニメーションでも、基本的に**propsだけ**で完結してしまうのが特徴です。
+どんなアニメーションでも、基本的に**props だけ**で完結してしまうのが特徴です。
 
 ```tsx
 <motion.div
@@ -79,7 +80,6 @@ const MotionComponent = motion(Component);
 
 `motion(Slot)`を使って、みんな大好き「[ふわっ](https://qiita.com/yuneco/items/24a209cb14661b8a7a20)」が手軽に実装できるようにしましょう。
 
-
 ### 実装
 
 ```tsx
@@ -103,7 +103,9 @@ const defaultCustom: Custom = {
   duration: 0.6,
 };
 
-const config = (custom?: Custom): React.ComponentProps<typeof ContentLayout> => {
+const config = (
+  custom?: Custom,
+): React.ComponentProps<typeof ContentLayout> => {
   const { y, once, amount, duration } = { ...defaultCustom, ...custom };
 
   return {
@@ -152,7 +154,7 @@ Enter.displayName = 'Enter';
 </Enter>
 ```
 
-CodeSandboxに使用例を上げました。
+CodeSandbox に使用例を上げました。
 
 @[codesandbox](https://codesandbox.io/embed/nifty-fast-gs8cjy?fontsize=14&hidenavigation=1&theme=dark)
 
@@ -160,9 +162,9 @@ CodeSandboxに使用例を上げました。
 
 ### 注意点
 
-`motion`は内部的にrefを使用します。なので、対象のコンポーネントがカスタムコンポーネントである場合、正しくrefをフォワーディングしている必要があります。
+`motion`は内部的に ref を使用します。なので、対象のコンポーネントがカスタムコンポーネントである場合、正しく ref をフォワーディングしている必要があります。
 
-refや`forwardRef`をご存知ない方は、調べてみてください。きっと、`Slot`や`motion`に比べてはるかに多くの記事がヒットするでしょう。
+ref や`forwardRef`をご存知ない方は、調べてみてください。きっと、`Slot`や`motion`に比べてはるかに多くの記事がヒットするでしょう。
 
 ## まとめ
 
