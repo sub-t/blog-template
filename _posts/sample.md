@@ -1,5 +1,5 @@
 ---
-title: 'アニメーションを使いまわすための「motion+Slot」戦略'
+title: 'Sample: アニメーションを使いまわすための「motion+Slot」戦略'
 excerpt: 'Framer MotionのmotionコンポーネントとRadix UIのユーティリティのコンポーネントSlotを組み合わせることで、アニメーションの再利用性を爆上げします。'
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
 date: '2022-07-01'

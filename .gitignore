@@ -18,7 +18,7 @@
 # misc
 .DS_Store
 *.pem
-
+*.ipynb_checkpoints*
 # debug
 npm-debug.log*
 yarn-debug.log*
